@@ -1,23 +1,14 @@
 import { Component } from '@angular/core';
+import { QuizService } from '../../quiz.service';
+
 @Component({
     templateUrl: "/quiz-categories.page.html"
 })
 export class QuizCategoriesPageComponent {
 
-    quizzes = [{
-        name: 'Quiz 1',
-        description: 'Quiz 1 Description'
-    },
-    {
-        name: 'Quiz 2',
-        description: 'Quiz 2 Description'
-    }]
-    constructor() {
+    quizzes: any;
 
+    constructor(private quizService: QuizService) {
+        this.quizzes = quizService.getQuizCategories();
     }
-
-
-    onVoted(result: any){
-        console.log(result);
-    }
- }
+}

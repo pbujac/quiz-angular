@@ -5,12 +5,20 @@ import { CanActivate, Router } from '@angular/router';
 @Injectable()
 export class AuthenticatedGuard implements CanActivate {
 
-    isLoggedIn: boolean = true;
+    isLoggedIn: boolean = false;
 
     constructor(private router: Router) {
     }
 
-    canActivate() {
+    canActivate() : boolean {
+        if (localStorage.getItem('authentication')) {
+            this.isLoggedIn = true;
+
+            return  this.isLoggedIn;
+        }
+
+        this.router.navigate(['/login']);
+
         return this.isLoggedIn;
     }
 }

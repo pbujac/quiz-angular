@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "../node_modules/ng2-flex-layout/dist/ng2-flex-layout.css";
+body {
+    margin: 0;
+    padding: 0;
+    font-family: open-sans;
+    font-size: 14px;
+    background-color: #EFECEA;
+}
+
+.align-center-items {
+    align-content: center;
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn {
+    width: 100%;
+    color: white;
+    font-family: open-sans;
+    text-transform: uppercase;
+    background-color: #64B5F6;
+}
+
+.material-icons {
+    font-size: 1em;
+    margin-right: 0.2em;
+}
+
+.form-group {
+    padding: 0 1em;
+}
+
+.error {
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    font-family: open-sans;
+}
+
+.card {
+    margin-bottom: 1.5em;
+    font-family: open-sans;
+}
+
+.single-answer {
+    padding: 1em;
+}
+.radio-btn{
+    margin-right: 1px;
+}

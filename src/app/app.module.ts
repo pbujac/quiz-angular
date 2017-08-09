@@ -5,10 +5,10 @@ import { AppComponent } from './app.component';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-
 import { routes } from './app.routes';
-import { HomeModule } from "app/modules/home/home.module";
+import { AuthModule } from "app/modules/auth/auth.module";
 import { QuizModule } from "app/modules/quiz/quiz.module";
+import { LayoutModule } from 'ng2-flex-layout';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,8 @@ import { QuizModule } from "app/modules/quiz/quiz.module";
     CoreModule,
     SharedModule,
     routes,
-
-    HomeModule,
+    LayoutModule,
+    AuthModule,
     QuizModule
   ],
   providers: [],

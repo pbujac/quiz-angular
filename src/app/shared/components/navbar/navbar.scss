@@ -1,0 +1,23 @@
+.navbar {
+    font-family: open-sans;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: white;
+    .inline {
+        display: block;
+        padding: 10px 15px;
+        .align-right {
+            display: inline;
+            float: right;
+        }
+        a {
+            text-decoration: none;
+            color: #EFECEA;
+            cursor: pointer;
+        }
+        h1 {
+            padding-left: 0.5em;
+            display: inline;
+        }
+    }
+}

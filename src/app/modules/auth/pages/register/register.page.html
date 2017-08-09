@@ -1,0 +1,61 @@
+<div class="base-form align-center-items">
+  <div class="border-thin">
+    <h1>Register Page</h1>
+
+    <md-error class="error" *ngIf="errors?.error?.details?.username?.message">
+      {{ errors.error.details.username.message }}
+    </md-error>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div layout="row">
+        <div flex="50" flexXs="50" class="form-group">
+          <md-input-container class="full-width">
+            <input formControlName="firstName" mdInput placeholder="First Name">
+            <md-error *ngIf="registerForm.get('firstName')?.touched && registerForm.get('firstName')?.hasError('required')">
+              First Name is required
+            </md-error>
+            <md-error *ngIf="registerForm.get('firstName')?.touched && registerForm.get('firstName')?.hasError('minlength')">
+              First Name must contains at least 5 characters
+            </md-error>
+          </md-input-container>
+        </div>
+        <div flex="50" flexXs="50" class="form-group">
+          <md-input-container class="full-width">
+            <input formControlName="lastName" mdInput placeholder="Last name">
+            <md-error *ngIf="registerForm.get('lastName')?.touched && registerForm.get('lastName')?.hasError('required')">
+              Last Name is required
+            </md-error>
+            <md-error *ngIf="registerForm.get('lastName')?.touched && registerForm.get('lastName')?.hasError('minlength')">
+              Last Name must contains at least 5 characters
+            </md-error>
+          </md-input-container>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <md-input-container class="full-width">
+          <input formControlName="username" mdInput placeholder="Username">
+
+          <md-error *ngIf="registerForm.get('username')?.touched && registerForm.get('username')?.hasError('required')">
+            Username is required
+          </md-error>
+
+        </md-input-container>
+      </div>
+
+      <div class="form-group">
+        <md-input-container class="full-width">
+          <input formControlName="password" type="password" mdInput placeholder="Password">
+          <md-error *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.hasError('required')">
+            Password is required
+          </md-error>
+          <md-error *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.hasError('minlength')">
+            Password must contains at least 5 characters
+          </md-error>
+        </md-input-container>
+      </div>
+
+      <button class="btn" md-button type="submit" [disabled]="!registerForm.valid">Register</button>
+    </form>
+  </div>
+</div>

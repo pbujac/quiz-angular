@@ -1,8 +1,0 @@
-<h1>Home Page</h1>
-<div>This is the my home page!</div>
-
-<div *ngFor="let user of users | async">
-    <img src="{{user.avatar_url}}" width="50" height="50">
-   <span>Login:  {{user.login}}</span>
-    <span>Account: <a [href]="user.html_url" target="_blank">{{user.html_url}}</a></span>
-</div>

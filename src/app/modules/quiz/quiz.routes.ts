@@ -1,3 +1,4 @@
+import { QuizSolvePageComponent } from './pages/quiz-solve/quiz-solve.page';
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { QuizCategoriesPageComponent } from "app/modules/quiz/pages/quiz-categories/quiz-categories.page";
@@ -7,13 +8,18 @@ import { AuthenticatedGuard } from "app/shared/guards/authenticated.guard";
 const routes: Routes = [
     {
         path: '',
-        component: QuizCategoriesPageComponent
+        component: QuizCategoriesPageComponent,
+        canActivate: [AuthenticatedGuard]
     },
-    { 
+    {
         path: 'quiz-create',
         component: QuizCreatePageComponent,
         canActivate: [AuthenticatedGuard],
-        canActivateChild: [AuthenticatedGuard]
+    },
+    {
+        path: 'quiz-solve/:id',
+        component: QuizSolvePageComponent,
+        canActivate: [AuthenticatedGuard],
     }
 ];
 

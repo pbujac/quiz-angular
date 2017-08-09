@@ -1,2 +1,23 @@
-<qz-navbar></qz-navbar>
-<router-outlet></router-outlet>
+<div class="row" layout="row">
+    <div class="navbar" flex>
+        <qz-navbar></qz-navbar>
+    </div>
+</div>
+
+<div class="sidebar" layout="row">
+    <div flex="15">
+        <qz-sidebar></qz-sidebar>
+    </div>
+    <div flex="85">
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+
+<div class="row" layout="row">
+    <div flex>
+        <qz-footer></qz-footer>
+    </div>
+</div>
