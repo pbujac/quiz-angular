@@ -6,7 +6,10 @@ import { QuizService } from './quiz.service';
 import { NgModule } from '@angular/core';
 import { routing } from "app/modules/quiz/quiz.routes";
 
-import {MdRadioModule,MdCardModule, MdButtonModule} from '@angular/material';
+import { MdRadioModule, MdCardModule, MdButtonModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+
+import { LayoutModule } from 'ng2-flex-layout';
 
 import { QuizCategoryComponent } from "app/modules/quiz/components/quiz-category/quiz-category.component";
 import { QuestionComponent } from "app/modules/quiz/components/questions/question/question.component";
@@ -19,8 +22,10 @@ import { SharedModule } from "app/shared/shared.module";
         SharedModule,
         routing,
         MdRadioModule,
+        FormsModule,
         MdCardModule,
-        MdButtonModule
+        MdButtonModule,
+        LayoutModule,
     ],
     declarations: [
         QuizCategoriesPageComponent,

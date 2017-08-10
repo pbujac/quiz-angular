@@ -1,5 +1,82 @@
 <h1>Solve quiz</h1>
 
- <quiz-questions [questions] = "quiz.questions"></quiz-questions> 
+<!-- <quiz-questions [questions] = "quiz.questions"></quiz-questions> 
 
-   <button class="btn btn-solve" md-button (submit)="onSubmit()" >Solve</button>
+   <button class="btn btn-solve" md-button >Solve</button> -->
+
+<md-card *ngIf="!endStatus" class="quiz-form">
+  <div *ngFor="let question of filteredQuestions;">
+    <div class="badge badge-info">Question {{pager.index + 1}} of {{pager.count}}.</div>
+
+    <md-card-actions class="align-left">
+      <div layout="row">
+        <div flex="75">
+          <div class="inline-block" *ngFor="let number of range(1, pager.count) ">
+            <button md-button [ngClass]="{'btn-answered': getAnsweredPage(number) }" [class.selected]="number === selectedPage" *ngIf="config.allowBack"
+              (click)="goTo(number-1);">
+          {{number}}
+        </button>
+          </div>
+        </div>
+        <div flex="25" class="align-right">
+          <div class="submit-form">
+            <button md-button class="btn-submit" (click)="onReview()">
+          <i class="material-icons">check</i>
+          Review
+        </button>
+            <button md-button class="btn-cancel" (click)="onSubmit()">
+          <i class="material-icons">close</i>
+          Cancel
+        </button>
+          </div>
+        </div>
+      </div>
+    </md-card-actions>
+
+    <md-card-title>
+      <p>{{pager.index + 1}}. {{question.text}}</p>
+    </md-card-title>
+    <md-card-content>
+
+      <md-radio-group>
+        <div *ngFor="let answer of question.answers" class="answer-card">
+          <md-radio-button [value]="answer.id" [checked]="answer.selected" (change)="onSelectAnswer(question, answer);" class="radio-btn">
+          </md-radio-button>
+          {{answer.text }}
+        </div>
+      </md-radio-group>
+
+    </md-card-content>
+
+    <md-card-actions class="align-center">
+      <button md-button (click)="goTo(pager.index -1);">
+          <i class="material-icons">arrow_back</i>
+        </button>
+      <button md-button (click)="goTo(pager.index + 1);">
+          <i class="material-icons">arrow_forward</i>
+        </button>
+    </md-card-actions>
+  </div>
+</md-card>
+
+<md-card *ngIf="endStatus">
+  <md-card-content class="align-left">
+    <!-- REVIEW -->
+    <div class="review" *ngIf="endStatus">
+      <div class="answer-block" *ngFor="let question of quiz.questions; let index = index; let isOdd=odd; let isEven=even;">
+
+        <div (click)="goTo(index)" [ngClass]="[isAnswered(question) ? 'answered' : 'not-answered']">
+          <p>{{index + 1}}. {{ isAnswered(question) ? 'Answered' : 'Not answered' }} </p>
+        </div>
+
+      </div>
+    </div>
+  </md-card-content>
+
+  <md-card-actions class="align-left">
+    <button md-button class="btn-submit" (click)="onSubmit()">
+          <i class="material-icons">check</i>
+          Submit
+        </button>
+  </md-card-actions>
+</md-card>

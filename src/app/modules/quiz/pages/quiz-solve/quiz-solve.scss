@@ -8,3 +8,93 @@ h1 {
     background-color: #E5AF42;
     color: #EFECEA;
 }
+button {
+    margin: 0.2em!important;
+}
+.answer-card {
+    padding: 1.8em;
+    border: 1px solid #D7D8DD;
+    margin: 10px;
+    display: block;
+    word-break: break-all;
+}
+
+p,
+div {
+    font-family: open-sans;
+    font-size: 1em;
+    color: #3A3F3F;
+}
+
+button {
+    background-color: #EFECEA;
+    color: #2D2C2D;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    padding-left: 1em;
+}
+
+.align-right {
+    text-align: right;
+    margin-right: 1em;
+}
+
+.inline-block {
+    display: inline;
+}
+
+.btn-answered {
+    background-color: #3A3F3F;
+    color: white;
+}
+
+.selected {
+    background-color: #E5AF42;
+}
+
+.btn-submit {
+    background-color: #328432;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #843232;
+    color: white;
+}
+
+.submit-form {
+    display: inline-flex;
+}
+
+.review {
+    display: block;
+    text-align: center;
+    .answer-block {
+        width: 20%;
+        display: inline-table;
+        cursor: pointer;
+        border: 1px solid #D7D8DD;
+        margin: 0.5em;
+        text-align: center;
+        p {
+            color: #EFECEA;
+            text-transform: uppercase;
+        }
+    }
+    .not-answered,
+    .answered {
+        padding: 1em;
+        opacity: 0.8;
+    }
+    .not-answered {
+        background-color: #660000;
+    }
+    .answered {
+        background-color: #003300;
+    }
+}

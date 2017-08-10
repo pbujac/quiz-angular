@@ -6,7 +6,14 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 export class AnswersComponent {
 
     @Input() answers: any;
+    @Output() onChangeAnswer: EventEmitter<any> = new EventEmitter<any>();
+
+    resultAnswer: any;
 
     constructor() {
+    }
+
+    public getAnswer() {
+        this.onChangeAnswer.emit(this.resultAnswer);
     }
 }
