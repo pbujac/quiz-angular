@@ -23,4 +23,4 @@ export class Quiz {
     public setQuizConfig(config: QuizConfig) {
         this.config = config;
     }
-}
+}  

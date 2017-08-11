@@ -8,15 +8,19 @@ h1 {
     background-color: #E5AF42;
     color: #EFECEA;
 }
+
 button {
     margin: 0.2em!important;
 }
+
 .answer-card {
-    padding: 1.8em;
+    padding: 1.2em;
     border: 1px solid #D7D8DD;
     margin: 10px;
+    width: 80%;
     display: block;
     word-break: break-all;
+    margin: 10px auto;
 }
 
 p,
@@ -41,9 +45,12 @@ button {
 
 .align-right {
     text-align: right;
-    margin-right: 1em;
+    margin-right: 5em;
 }
 
+.align-center{
+    text-align: center;
+}
 .inline-block {
     display: inline;
 }
@@ -88,13 +95,20 @@ button {
     }
     .not-answered,
     .answered {
-        padding: 1em;
+        padding: 0.2em;
         opacity: 0.8;
     }
     .not-answered {
-        background-color: #660000;
+        background-color: #EFECEA;
+        p {
+            color: black;
+        }
     }
     .answered {
-        background-color: #003300;
+        background-color: #2D2C2D;
     }
+}
+
+.pagination {
+    min-width: 1em;
 }

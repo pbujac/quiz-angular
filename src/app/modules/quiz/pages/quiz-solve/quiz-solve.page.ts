@@ -19,8 +19,9 @@ export class QuizSolvePageComponent {
     quizId: number;
     selectedPage: number;
     answeredPages: Array<number>;
+    inputRange: Array<number>;
     endStatus: boolean;
-
+    p: number = 1;
     quizName: string;
     config: QuizConfig = {
         'allowBack': true,
@@ -51,6 +52,7 @@ export class QuizSolvePageComponent {
             this.quizId = params['id'];
         });
 
+        this.inputRange = new Array();
         this.answeredPages = new Array();
         this.endStatus = false;
         this.loadQuiz(this.quizName);
@@ -67,6 +69,7 @@ export class QuizSolvePageComponent {
                 this.quiz.setQuizConfig(this.config);
                 this.pager.count = this.quiz.questions.length;
                 this.quiz = result;
+                this.inputRange = this.range(1, this.pager.count);
             }
         );
     }
@@ -80,16 +83,36 @@ export class QuizSolvePageComponent {
             this.pager.index = index;
             this.selectedPage = index + 1;
             this.endStatus = false;
+
+            this.inputRange = [];
+            if (this.pager.count + 1 <= 10) {
+                this.inputRange = this.range(1, this.pager.count);
+            } else {
+
+                if (this.pager.index <= 6) {
+                    this.inputRange = this.range(1, 10);
+                } else if (this.pager.index + 4 >= this.pager.count ) {
+                    this.inputRange = this.range(this.pager.count - 9, this.pager.count );
+                } else {
+                    this.inputRange = this.range(this.pager.index - 5, this.pager.index + 4);
+                }
+            }
         }
     }
 
+    public checkPage() {
+
+        return (this.quiz.questions) ?
+            this.quiz.questions.slice(this.pager.index, this.pager.index + 10) : [];
+    }
+
     public range(min: number, max: number) {
-        var input = [];
+  
         for (var i = min; i <= max; i++) {
-            input.push(i);
+            this.inputRange.push(i);
         }
 
-        return input;
+        return this.inputRange;
     };
 
     public onSelectAnswer(question: Question, answer: Answer) {
