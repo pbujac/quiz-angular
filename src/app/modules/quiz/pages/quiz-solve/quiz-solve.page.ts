@@ -145,6 +145,6 @@ export class QuizSolvePageComponent {
     }
 
     public onSubmit() {
-        console.log('On submit');
+        console.log(this.quiz);
     }
 }
