@@ -9,6 +9,7 @@ export class Question {
         question = question || {};
         this.id = question.id;
         this.text = question.text;
+        this.answered = false;
         this.answers = [];
         question.answers.forEach(a => {
             this.answers.push(new Answer(a));

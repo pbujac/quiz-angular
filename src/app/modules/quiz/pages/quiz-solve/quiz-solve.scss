@@ -29,7 +29,8 @@ div {
     font-size: 1em;
     color: #3A3F3F;
 }
-.question{
+
+.question {
     padding: 1em 1em 0.1em;
 }
 
@@ -51,9 +52,10 @@ button {
     margin-right: 5em;
 }
 
-.align-center{
+.align-center {
     text-align: center;
 }
+
 .inline-block {
     display: inline;
 }
@@ -114,4 +116,11 @@ button {
 
 .pagination {
     min-width: 1em;
+    &:disabled {
+        background-color: #C9CACA;
+    }
+}
+
+.radio-btn {
+    padding: 1em;
 }

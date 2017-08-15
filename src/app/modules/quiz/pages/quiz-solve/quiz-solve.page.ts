@@ -1,3 +1,5 @@
+import { ResultAnswer } from './model/result-answer';
+import { Result } from './model/result';
 import { Answer } from './model/answer';
 import { Question } from './model/question';
 import { Quiz } from './model/quiz';
@@ -5,7 +7,7 @@ import { QuizConfig } from './model/quiz-config';
 import { QuizService } from '../../quiz.service';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { UrlValidator } from "app/shared/validators";
 
@@ -45,7 +47,8 @@ export class QuizSolvePageComponent {
 
     constructor(
         private quizService: QuizService,
-        private route: ActivatedRoute
+        private route: ActivatedRoute,
+        private router: Router
     ) {
         this.selectedPage = 1;
         this.route.params.subscribe(params => {
@@ -91,8 +94,8 @@ export class QuizSolvePageComponent {
 
                 if (this.pager.index <= 6) {
                     this.inputRange = this.range(1, 10);
-                } else if (this.pager.index + 4 >= this.pager.count ) {
-                    this.inputRange = this.range(this.pager.count - 9, this.pager.count );
+                } else if (this.pager.index + 4 >= this.pager.count) {
+                    this.inputRange = this.range(this.pager.count - 9, this.pager.count);
                 } else {
                     this.inputRange = this.range(this.pager.index - 5, this.pager.index + 4);
                 }
@@ -107,7 +110,7 @@ export class QuizSolvePageComponent {
     }
 
     public range(min: number, max: number) {
-  
+
         for (var i = min; i <= max; i++) {
             this.inputRange.push(i);
         }
@@ -117,15 +120,22 @@ export class QuizSolvePageComponent {
 
     public onSelectAnswer(question: Question, answer: Answer) {
 
-        question.answers.forEach((a) => {
-            a.selected = false;
-            if (a.id === answer.id) {
-                question.answered = true;
-                a.selected = true;
-                this.answeredPages.push(this.pager.index + 1);
+        if (question.answers.some(isAnswered)) {
+            question.answered = true;
+            this.answeredPages.push(this.pager.index + 1);
+        } else {
+
+            for (let i = 0; i < this.answeredPages.length; i++) {
+                if (this.answeredPages[i] === this.pager.index + 1) {
+                    question.answered = false;
+                    delete this.answeredPages[i];
+                }
             }
         }
-        );
+
+        function isAnswered(element, index, array) {
+            return element.selected;
+        }
 
         if (this.config.autoMove) {
             this.goTo(this.pager.index + 1);
@@ -145,6 +155,11 @@ export class QuizSolvePageComponent {
     }
 
     public onSubmit() {
-        console.log(this.quiz);
+        this.quizService.solveQuiz(this.quiz).subscribe(
+            result => { },
+            err => err
+        );
+
+         this.router.navigate(['/quiz-completed/'+this.quiz.id]);
     }
 }

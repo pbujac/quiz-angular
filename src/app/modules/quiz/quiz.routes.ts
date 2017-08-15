@@ -1,3 +1,4 @@
+import { QuizCompletedPageComponent } from './pages/quiz-completed/quiz-completed.page';
 import { QuizSolvePageComponent } from './pages/quiz-solve/quiz-solve.page';
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -19,6 +20,12 @@ const routes: Routes = [
     {
         path: 'quiz-solve/:id',
         component: QuizSolvePageComponent,
+        canActivate: [AuthenticatedGuard],
+    }
+    ,
+    {
+        path: 'quiz-completed/:id',
+        component: QuizCompletedPageComponent,
         canActivate: [AuthenticatedGuard],
     }
 ];

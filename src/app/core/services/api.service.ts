@@ -35,10 +35,10 @@ export class ApiService {
     }
 
     public post(path: string, body: any): Observable<any> {
-        let endpoint = `${this.apiEndpoint}/${path}`
+        let endpoint = `${this.apiEndpoint}/${path}`;
         let headers = this.createAuthorizationHeader();
         body = KeyTransformer.transformToSnakeCase(body);
-
+        
         return this.http
             .post(`${endpoint}`, body, { headers: headers })
             .map(res => this.extractData(res))

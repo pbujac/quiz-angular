@@ -6,11 +6,11 @@ import { QuizService } from './quiz.service';
 import { NgModule } from '@angular/core';
 import { routing } from "app/modules/quiz/quiz.routes";
 
-import { MdRadioModule, MdCardModule, MdButtonModule } from '@angular/material';
+import { MdRadioModule, MdCardModule, MdButtonModule,MdCheckboxModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 import { LayoutModule } from 'ng2-flex-layout';
-
+import { QuizCompletedPageComponent } from './pages/quiz-completed/quiz-completed.page';
 import { QuizCategoryComponent } from "app/modules/quiz/components/quiz-category/quiz-category.component";
 import { QuestionComponent } from "app/modules/quiz/components/questions/question/question.component";
 import { QuizCategoriesPageComponent } from "app/modules/quiz/pages/quiz-categories/quiz-categories.page";
@@ -26,6 +26,7 @@ import { SharedModule } from "app/shared/shared.module";
         MdCardModule,
         MdButtonModule,
         LayoutModule,
+        MdCheckboxModule
     ],
     declarations: [
         QuizCategoriesPageComponent,
@@ -33,6 +34,7 @@ import { SharedModule } from "app/shared/shared.module";
         QuizCategoryComponent,
         QuizSolvePageComponent,
         QuestionsComponent,
+        QuizCompletedPageComponent,
         QuestionComponent,
         AnswersComponent,
         AnswerComponent
