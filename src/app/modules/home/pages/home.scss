@@ -1,0 +1,32 @@
+@import "../../../../assets/sass/utils/utils";
+
+section {
+  padding: em(20) em(40) 0;
+  text-align: center;
+
+  .line{
+    border-top: 5px solid $yellow;
+    width: 10%;
+    margin: 0 auto em(10);
+  }
+  .card {
+    padding: em(25);
+    margin: em(10);
+    background: $white;
+    img{
+      max-height: em(150);
+      max-width: 100%;
+      display: block;
+      margin: em(10) auto;
+    }
+    p{
+      font-size: em(10);
+    }
+    button{
+      background-color: $white;
+      border: 3px solid $yellow;
+      width: 70%;
+    }
+
+  }
+}

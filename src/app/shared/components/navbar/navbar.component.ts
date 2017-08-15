@@ -1,19 +1,16 @@
-import { AuthService } from '../../../modules/auth/auth.service';
-import { Component, Output, EventEmitter } from '@angular/core';
-import { AuthenticatedGuard } from '../../guards/authenticated.guard';
+import {Component} from '@angular/core';
 
 @Component({
-    selector: 'qz-navbar',
-    templateUrl: 'navbar.component.html',
-    styleUrls: ['navbar.scss']
+  selector: 'qz-navbar',
+  templateUrl: 'navbar.component.html',
+  styleUrls: ['navbar.scss']
 })
 export class NavbarComponent {
 
-    constructor(authGuard: AuthenticatedGuard,
-        private authService: AuthService) {
-    }
+  constructor() {
+  }
 
-    onLogout(){
-        this.authService.logout();
-    }
+  public onLogout(): void {
+  }
+
 }

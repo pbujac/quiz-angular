@@ -1,3 +1,6 @@
-.footer{
-    padding: 2em 1em 0.5em;
+@import "../../../../assets/sass/utils/utils";
+
+footer {
+  padding: em(12);
+  font-size: em(8);
 }

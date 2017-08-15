@@ -1,23 +1,13 @@
-<div class="row" layout="row">
-    <div class="navbar" flex>
-        <qz-navbar></qz-navbar>
+<qz-navbar></qz-navbar>
+
+<div class="row">
+
+    <div class="medium-12 columns">
+      <router-outlet></router-outlet>
     </div>
+
 </div>
 
-<div class="sidebar" layout="row">
-    <div flex="15">
-        <qz-sidebar></qz-sidebar>
-    </div>
-    <div flex="85">
-        <div class="container">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-</div>
+<qz-footer></qz-footer>
 
 
-<div class="row" layout="row">
-    <div flex>
-        <qz-footer></qz-footer>
-    </div>
-</div>
