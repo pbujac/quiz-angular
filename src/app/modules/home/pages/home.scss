@@ -10,7 +10,7 @@ section {
     margin: 0 auto em(10);
   }
   .card {
-    padding: em(25);
+    padding: em(25) em(20) em(45);
     margin: em(10);
     background: $white;
     img{
@@ -21,11 +21,13 @@ section {
     }
     p{
       font-size: em(10);
+      margin: em(10) em(10) em(20);
     }
-    button{
+    a{
       background-color: $white;
       border: 3px solid $yellow;
-      width: 70%;
+      padding: em(10) em(35);
+      border-radius: 3%;
     }
 
   }
