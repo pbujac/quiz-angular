@@ -1,0 +1,37 @@
+.card{
+    margin: 15px 20px 15px 20px;
+    background-color: #E6FDFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-style: outset;
+    border-width: 1px 1px 2px 1px;
+
+    .header{
+        .title{
+            font-size: 18px;
+            color: #00120B;
+            text-shadow: 1px 1px 1px #37474f; 
+        }
+    }
+
+    .description{
+        color: #00120B;
+        font-style: italic;
+        text-align: left;
+        padding: 0px 10px 0px 10px;
+        font-size: 14px;
+    }
+
+    .image{
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer{
+        padding: 0px 20px 0px 20px;
+        color: #104547;
+
+        .score{
+            font-size: 18px;
+        }
+    }
+}

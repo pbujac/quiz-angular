@@ -1,0 +1,44 @@
+<h1> My Result </h1>
+
+<div class="row">
+    <div class="large-4 columns" *ngFor="let result of results">
+        <md-card class="card">
+            <md-card-header class="header">
+                <md-card-title class="title">
+                    {{result.quiz.title}}
+                </md-card-title>
+                <md-card-subtitle class="subtitle">
+                    Category : {{result.quiz.category.title}}
+                </md-card-subtitle>
+            </md-card-header>
+
+            <md-card-content>
+                <div class="row">
+                    <div class="large-10 column description">
+                        {{result.quiz.description | slice:0:380 }}
+                    </div>
+                    <div class="large-2">
+                        <div *ngIf="result.score > 69; else elseTemplate">
+                            <img class="image" src="assets/images/user-result/good-result.png">
+                        </div>
+                        <ng-template #elseTemplate>
+                            <img class="image" src="assets/images/user-result/bad-result.png">
+                        </ng-template>
+                    </div>
+                </div>
+            </md-card-content>
+
+            <div class="row footer">
+                <div class="large-8 column">
+                    Solved at: {{result.created_at * 1000 | date}}
+                </div>
+                <div class="large-4 column">
+                    Score: {{result.score}} %
+                </div>
+            </div>
+        </md-card>
+    </div>
+</div>
+<md-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [pageIndex]="pageIndex" (page)="getResulstByPage($event)">
+
+</md-paginator>
