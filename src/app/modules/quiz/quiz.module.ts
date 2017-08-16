@@ -14,9 +14,9 @@ import {MdRadioModule,MdCardModule, MdButtonModule, MdSelectModule} from '@angul
 import { SharedModule } from "app/shared/shared.module";
 import { QuizService } from './quiz.service';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { routing } from "app/modules/quiz/quiz.routes";
 import { NgModel, NgForm, FormsModule } from '@angular/forms';
- 
  
 @NgModule({
     imports: [
@@ -30,13 +30,7 @@ import { NgModel, NgForm, FormsModule } from '@angular/forms';
     ],
     declarations: [
         QuizCategoriesPageComponent,
-        // QuizCreatePageComponent,
         QuizCategoryComponent,
-        // QuizSolvePageComponent,
-        // QuestionsComponent,
-        // QuestionComponent,
-        // AnswersComponent,
-        // AnswerComponent,
         QuizComponent,
         QuizCategorySelectorComponent,
         QuizListByCategoriesPageComponent

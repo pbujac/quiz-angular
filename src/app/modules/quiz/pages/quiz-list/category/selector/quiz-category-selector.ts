@@ -2,7 +2,6 @@ import { Component, Input, EventEmitter, Output, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { QuizService } from '../../../../quiz.service';
 
-
 @Component({
   selector: 'quiz-category-selector',
   templateUrl: 'quiz-category-selector.html'

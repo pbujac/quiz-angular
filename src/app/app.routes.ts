@@ -10,6 +10,10 @@ const appRoutes: Routes = [
   {
     path: 'home',
     loadChildren: './modules/home/home.module#HomeModule'
+  },
+  {
+     path: 'quiz',
+     loadChildren: './modules/quiz/quiz.module#QuizModule'
   }
 ];
 
