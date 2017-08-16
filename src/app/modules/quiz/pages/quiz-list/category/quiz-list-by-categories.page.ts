@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../../../quiz.service';
 
+
 @Component({
     templateUrl: "/quiz-list-by-categories.page.html"
 })
