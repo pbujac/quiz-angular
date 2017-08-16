@@ -1,29 +1,22 @@
 @import "../../../../assets/sass/utils/utils";
 
 section {
-  padding: em(20) em(40) 0;
-  text-align: center;
 
-  .line{
-    border-top: em(5) solid $yellow;
-    width: 10%;
-    margin: 0 auto em(10);
-  }
   .card {
     padding: em(25) em(20) em(45);
-    margin: em(10);
-    background: $white;
-    img{
+
+    img {
       max-height: em(150);
       max-width: 100%;
       display: block;
       margin: em(10) auto;
     }
-    p{
+    p {
       font-size: em(10);
       margin: em(10) em(10) em(20);
     }
-    a{
+    a {
+      color: $grey-black;
       background-color: $white;
       border: em(3) solid $yellow;
       padding: em(10) em(35);

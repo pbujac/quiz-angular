@@ -4,4 +4,11 @@ button, .btn{
   text-transform: uppercase;
   font-size: em(10);
   font-weight: 500;
+  background-color: $yellow;
+  color: $natural-white;
+
+  &:disabled{
+    background-color: $grey-white;
+  }
 }
+
