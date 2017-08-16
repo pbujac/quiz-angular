@@ -1,11 +1,5 @@
-// import { AnswerComponent } from './components/answers/answer/answer.component';
-// import { AnswersComponent } from './components/answers/answers.component';
-// import { QuestionsComponent } from './components/questions/questions.component';
-// import { QuizSolvePageComponent } from './pages/quiz-solve/quiz-solve.page';
 import { QuizCategoryComponent } from "app/modules/quiz/components/quiz-category/quiz-category.component";
-// import { QuestionComponent } from "app/modules/quiz/components/questions/question/question.component";
 import { QuizCategoriesPageComponent } from "app/modules/quiz/pages/quiz-categories/quiz-categories.page";
-// import { QuizCreatePageComponent } from "app/modules/quiz/pages/quiz-create/quiz-create.page";
 import { QuizListByCategoriesPageComponent } from "app/modules/quiz/pages/quiz-list/category/quiz-list-by-categories.page";
 import { QuizComponent } from "app/modules/quiz/components/quiz/quiz.component";
 import { QuizCategorySelectorComponent } from "app/modules/quiz/pages/quiz-list/category/selector/quiz-category-selector";
