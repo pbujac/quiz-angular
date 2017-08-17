@@ -8,6 +8,7 @@ import {AbstractControl} from '@angular/forms';
 export function MatchPasswordValidation(control: AbstractControl) {
 
   if (control.get('password').value != control.get('confirmPassword').value) {
+
     control.get('confirmPassword').setErrors({matchPassword: true});
   }
 

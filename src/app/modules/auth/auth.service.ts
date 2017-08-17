@@ -41,7 +41,11 @@ export class AuthService {
     });
   }
 
-
+  /**
+   * @param user
+   *
+   * @returns {Observable<any>}
+   */
   public login(user): Observable<any> {
 
     return Observable.create(observer => {
@@ -57,7 +61,7 @@ export class AuthService {
   }
 
 
-  public logout() {
+  public logout() : void{
 
     localStorage.clear();
     this.loggedIn = false;
@@ -65,6 +69,11 @@ export class AuthService {
 
   }
 
+  /**
+   * @param {string} username
+   *
+   * @returns {Observable<any>}
+   */
   public getUserByUsername(username: string): Observable<any> {
 
     return Observable.create(observer => {
