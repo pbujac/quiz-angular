@@ -6,7 +6,6 @@ import {MdRadioModule,MdCardModule, MdButtonModule, MdPaginatorModule} from '@an
 import { UserResultsPageComponent } from './pages/user-results/user-results.page'
 
 import { SharedModule } from 'app/shared/shared.module';
-// import { FlexLayoutModule } from '@angular/flex-layout';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 
 
@@ -17,7 +16,6 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
         MdRadioModule,
         MdCardModule,
         MdButtonModule,
-        // FlexLayoutModule,
         MdPaginatorModule,
         Ng2OrderModule
     ],

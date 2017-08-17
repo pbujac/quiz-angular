@@ -1,37 +1,48 @@
-.card{
-    margin: 15px 20px 15px 20px;
-    background-color: #E6FDFF;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-style: outset;
-    border-width: 1px 1px 2px 1px;
+@import "src/assets/sass/utils/utils";
 
-    .header{
-        .title{
-            font-size: 18px;
-            color: #00120B;
-            text-shadow: 1px 1px 1px #37474f; 
+section{
+    padding: em(20) em(40) 0;
+    text-align: center;
+    
+    .line{
+            border-top: em(5) solid $yellow;
+            width: 10%;
+            margin: 0 auto em(10);
         }
-    }
 
-    .description{
-        color: #00120B;
-        font-style: italic;
-        text-align: left;
-        padding: 0px 10px 0px 10px;
-        font-size: 14px;
-    }
+    .card{
+        background-color: #E6FDFF;
+        margin: 15px 20px;
+        border-style: outset;
+        border-width: 1px 1px 3px 1px;
+        // height: 250px;
 
-    .image{
-        width: 100px;
-        height: 100px;
-    }
+        .header{
+            .title{
+                font-size: 18px;
+                color: #00120B;
+                text-shadow: 1px 1px 1px #37474f; 
+            }
+        }
 
-    .footer{
-        padding: 0px 20px 0px 20px;
-        color: #104547;
+        .description{
+            color: #00120B;
+            font-style: italic;
+            text-align: left;
+            font-size: 14px;
+        }
 
-        .score{
-            font-size: 18px;
+        .image{
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer{
+            color: #104547;
+
+            .date{
+                float: left;
+            }
         }
     }
 }
