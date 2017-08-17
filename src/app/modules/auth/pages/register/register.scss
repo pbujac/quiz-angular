@@ -12,6 +12,10 @@ section {
       margin-top: em(25);
     }
 
+    input{
+      padding: 0 em(10);
+    }
+
     .term-conditions{
       font-size: em(12);
       color: $grey-black;
@@ -20,6 +24,7 @@ section {
     .error{
       margin-bottom: em(15);
       font-size: em(12);
+      display: block;
       font-weight: 600;
       font-family: $second-font-family;
       text-transform: uppercase;

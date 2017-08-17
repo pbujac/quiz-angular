@@ -1,4 +1,4 @@
-import {AbstractControl, FormControl} from "@angular/forms";
+import {AbstractControl} from "@angular/forms";
 import {AuthService} from "../../modules/auth/auth.service";
 
 export class UniqueUserValidation {
