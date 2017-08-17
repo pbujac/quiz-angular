@@ -1,4 +1,5 @@
- <md-select  style="width: 100%"  placeholder="Categories" [(ngModel)]="selectedValue" (change)="sendValue()"  >
+ 
+<md-select  style="width: 100%"  placeholder="Categories" [(ngModel)]="selectedValue" (change)="sendValue()"  >
   <md-option *ngFor="let category of quizzes "   value={{category.id}}>
       {{category.title}}      
   </md-option>
