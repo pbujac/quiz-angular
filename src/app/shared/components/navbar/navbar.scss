@@ -7,19 +7,19 @@
   color: $white;
   padding: em(15) em(25);
 
-  .align-right, h1 {
+  .align-center, h1 {
     display: inline;
   }
 
-  .align-right, .align-left {
+  .align-center, .align-left {
     font-size: em(10);
     font-family: $second-font-family;
   }
   h1 {
     margin-right: em(15);
   }
-  .align-right {
-    float: right;
+  .align-center {
+    float: center;
     margin-top: em(8);
   }
 
