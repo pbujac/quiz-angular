@@ -39,10 +39,8 @@ export class RegisterPageComponent implements OnInit {
       this.registerForm.value.lastName
     );
 
-    this.authService.register(user).subscribe(
-      results => {
-      },
-      err => {
+    this.authService.register(user).subscribe(results => {
+      }, err => {
         if (err.error.details.username) {
           this.error = err.error.details.username;
         }
