@@ -11,6 +11,10 @@
     display: inline;
   }
 
+  .active {
+    color: $yellow;
+  }
+
   .align-right, .align-left {
     font-size: em(10);
     font-family: $second-font-family;
@@ -20,7 +24,7 @@
   }
   .align-right {
     float: right;
-    margin-top: em(8);
+    margin: em(8) em(10) 0;
   }
 
   .align-left {

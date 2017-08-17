@@ -28,27 +28,13 @@ body {
 .centered {
   margin: 0 auto;
 }
-.left{
+
+.left {
   text-align: left;
 }
-.right{
+
+.right {
   text-align: right;
-}
-
-section {
-  padding: em(20) em(40) 0;
-  text-align: center;
-
-  .line {
-    border-top: em(5) solid $yellow;
-    width: 10%;
-    margin: 0 auto em(10);
-  }
-
-  .card{
-    margin: em(10);
-    background: $white;
-  }
 }
 
 

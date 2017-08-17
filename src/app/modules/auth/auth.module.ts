@@ -6,6 +6,7 @@ import {FormsModule} from "@angular/forms";
 import {SharedModule} from "../../shared/shared.module";
 import {MdCardModule, MdInputModule, MdButtonModule, MdCheckboxModule} from '@angular/material';
 import {AuthService} from "./auth.service";
+import {LoginPageComponent} from "./pages/login/login.page";
 
 @NgModule({
   imports: [
@@ -18,7 +19,10 @@ import {AuthService} from "./auth.service";
     MdInputModule,
     MdCheckboxModule,
   ],
-  declarations: [RegisterPageComponent],
+  declarations: [
+    RegisterPageComponent,
+    LoginPageComponent
+  ],
   providers: [AuthService]
 })
 export class AuthModule {
