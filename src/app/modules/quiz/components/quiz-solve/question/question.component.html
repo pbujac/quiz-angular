@@ -1,0 +1,10 @@
+<div *ngIf="quiz">
+
+  <div *ngFor="let question of filteredQuestions;">
+
+    <p>{{page.index + 1}}. {{question.text}}</p>
+
+    <qz-answers [answers]="question.answers"></qz-answers>
+
+  </div>
+</div>

@@ -4,16 +4,20 @@ import {Routes, RouterModule} from '@angular/router';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'auth',
     pathMatch: 'full'
+  },
+  {
+    path: 'auth',
+    loadChildren: './modules/auth/auth.module#AuthModule'
   },
   {
     path: 'home',
     loadChildren: './modules/home/home.module#HomeModule'
   },
   {
-    path: 'auth',
-    loadChildren: './modules/auth/auth.module#AuthModule'
+    path: 'quiz',
+    loadChildren: './modules/quiz/quiz.module#QuizModule'
   }
 ];
 

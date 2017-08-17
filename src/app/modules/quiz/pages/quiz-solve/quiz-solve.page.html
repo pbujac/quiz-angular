@@ -1,0 +1,20 @@
+<section>
+
+  <h1>Solve quiz : {{ quiz.title }}</h1>
+  <div class="line"></div>
+
+  <div class="row collapse">
+
+    <article class="medium-10 small-12 columns centered">
+      <md-card class="card">
+
+        <qz-pagination [page]="page"></qz-pagination>
+
+        <qz-question [page]="page" [quiz]="quiz"></qz-question>
+
+        <qz-pagination [page]="page" [nextPrevPagination]="true"></qz-pagination>
+
+      </md-card>
+    </article>
+  </div>
+</section>

@@ -8,7 +8,7 @@ import {User} from './model/user.model';
 @Injectable()
 export class AuthService {
 
-  loggedIn : boolean = false;
+  loggedIn : boolean = true;
 
   /**
    * @param {ApiService} api
@@ -52,7 +52,7 @@ export class AuthService {
       this.api.post(`login`, user).subscribe(result => {
 
         localStorage.setItem('authentication', result.token);
-        this.router.navigate(['/']);
+        this.router.navigate(['/home']);
         this.loggedIn = true;
         observer.next(result);
 
