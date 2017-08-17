@@ -21,4 +21,22 @@ export class QuizService {
     public incrementPage(page: number){
         return ++page;
     }
+      public getQuizzes(page: number, count:number): Observable<any>  {
+
+        return Observable.create(observer => {
+            this.api.get('quizzes?page='+page+'&count='+count).subscribe(result => {
+                observer.next(result._embedded.quizzes);
+            }, err => observer.error(err));
+        });
+    }
+
+     public getTotal(page:number): Observable<any>  {
+
+        return Observable.create(observer => {
+            this.api.get('quizzes?page='+page).subscribe(result => {
+                 observer.next(result.total);
+            }, err => observer.error(err));         
+        });
+    }
+
 }
