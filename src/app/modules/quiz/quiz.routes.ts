@@ -11,7 +11,7 @@ const routes: Routes = [
     // },
     {
         path: 'user-results',
-        component: UserResultsPageComponent,
+        component: UserResultsPageComponent
         // canActivate: [AuthenticatedGuard],
     }
 ];
