@@ -10,9 +10,8 @@ export class AuthService {
 
   /**
    * @param {ApiService} api
-   * @param {Router} router
    */
-  constructor(private api: ApiService, private router: Router) {
+  constructor(private api: ApiService) {
   }
 
   /**
@@ -25,7 +24,6 @@ export class AuthService {
     return Observable.create(observer => {
       this.api.post(`users/register`, user).subscribe(result => {
 
-        this.router.navigate(['/login']);
         observer.next(result);
 
       }, err => observer.error(err));

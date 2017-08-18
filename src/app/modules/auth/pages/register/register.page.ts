@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormControl, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 import {MatchPasswordValidation} from "app/shared/validators/match-password.validator";
 import {ValidCheckBoxValidation} from "app/shared/validators/valid-checkbox.validator";
 import {AuthService} from "../../auth.service";
@@ -15,7 +16,11 @@ export class RegisterPageComponent implements OnInit {
   protected registerForm: FormGroup;
   protected error: any;
 
-  constructor(private authService: AuthService) {
+  /**
+   * @param {AuthService} authService
+   * @param {Router} router
+   */
+  constructor(private authService: AuthService, private router: Router) {
   }
 
   ngOnInit() {
@@ -32,6 +37,7 @@ export class RegisterPageComponent implements OnInit {
   }
 
   public onRegister(): void {
+
     let user = new User(
       this.registerForm.value.username,
       this.registerForm.value.password,
@@ -40,8 +46,12 @@ export class RegisterPageComponent implements OnInit {
     );
 
     this.authService.register(user).subscribe(results => {
+    
+      this.router.navigate(['/login']);
+
       }, err => {
-        if (err.error.details.username) {
+
+        if (err.error) {
           this.error = err.error.details.username;
         }
       }
