@@ -1,4 +1,7 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { MdDialog } from '@angular/material';
+
+import { QuizObservable } from './modal/modal-quiz.component';
 
 @Component({
     selector: 'quiz',
@@ -8,6 +11,10 @@ export class QuizComponent {
 
     @Input() quiz: any;
 
-    constructor() {
+    constructor(private dialog: MdDialog) {
     }
+       openDialog() {
+        this.dialog.open(QuizObservable);
+    }
+
 }
