@@ -1,15 +1,18 @@
 import {Component} from '@angular/core';
 import {MdDialog} from '@angular/material';
 import { QuizService } from '../../../quiz.service';
-
+import { QuizComponent } from '../quiz.component';
 
 @Component({
-  selector: 'dialog-overview-example-dialog',
+  selector: 'quiz-modal',
   templateUrl: '/modal-quiz.component.html',
+  inputs: ['quiz']
 })
-export class QuizObservable {
+
+export class QuizModal {
 
   quiz: any;
+  id: number;
   
   constructor(private quizService: QuizService) {
     }

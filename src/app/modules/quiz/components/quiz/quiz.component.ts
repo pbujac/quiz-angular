@@ -1,7 +1,8 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { MdDialog } from '@angular/material';
+import { QuizService } from '../../quiz.service';
 
-import { QuizObservable } from './modal/modal-quiz.component';
+import { QuizModal } from './modal/modal-quiz.component';
 
 @Component({
     selector: 'quiz',
@@ -14,7 +15,30 @@ export class QuizComponent {
     constructor(private dialog: MdDialog) {
     }
        openDialog() {
-        this.dialog.open(QuizObservable);
+        let dialogRef = this.dialog.open(QuizObserver);
+        
+    }
+}
+
+
+
+@Component({
+  selector: 'quiz-observer',
+  templateUrl: '/quiz-observer.component.html',
+})
+export class QuizObserver {
+  
+  @Input('quiz') quiz: any;
+  
+  constructor(private quizService: QuizService) {
     }
 
+
+//   quiz=this.getQuizById(this.id) ;
+
+//    getQuizesByCategory(id:number){
+//         this.quizzes = this.quizService.getQuizzeseByCategory(id);
+//     }
 }
+
+
