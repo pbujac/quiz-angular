@@ -10,6 +10,6 @@
     </md-card-content>
      <md-card-actions>
       <button md-button routerLink="/quiz-solve/{{quiz.id}}"> Try it</button>
-      <button md-button class="btn" *ngIf="quiz.description.length>150" (click)="openDialog()">More</button>
+      <button md-button *ngIf="quiz.description.length>150" (click)="openDialog()">More</button>
      </md-card-actions>
     </md-card>

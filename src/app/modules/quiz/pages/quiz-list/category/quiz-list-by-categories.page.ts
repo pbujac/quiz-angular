@@ -8,7 +8,7 @@ import { QuizService } from '../../../quiz.service';
 export class QuizListByCategoriesPageComponent {
 
     id: number;
-    quizzes: any;;
+    quizzes: any;
 
       ngOnInit() { 
     }
