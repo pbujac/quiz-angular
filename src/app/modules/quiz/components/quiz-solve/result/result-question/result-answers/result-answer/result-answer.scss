@@ -1,0 +1,12 @@
+@import "../../../../../../../../../assets/sass/utils/utils";
+
+.correct, .incorrect {
+  padding: em(20);
+}
+
+.correct{
+  background-color: $green;
+}
+.incorrect{
+  background-color: $red;
+}

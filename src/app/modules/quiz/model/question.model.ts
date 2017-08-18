@@ -5,6 +5,7 @@ export class Question {
   id: number;
   text: string;
   answers: Answer[];
+  correctAnswers: Answer[];
   answered: boolean;
 
   constructor(question: any) {

@@ -1,5 +1,8 @@
-import { Component, Input, Output} from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { QuizService } from 'app/modules/quiz/quiz.service';
+
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbdModalContent } from './modal-component';
 
 @Component({
     templateUrl: '/user-results.page.html',
@@ -15,7 +18,7 @@ export class UserResultsPageComponent {
     @Input() pageIndex: number = 0;
     @Output() page: number;
 
-    constructor(private quizService: QuizService) {
+    constructor(private quizService: QuizService, private modalService: NgbModal) {
         this.getResults(this.pageIndex, this.pageSize);
     }
 
@@ -32,4 +35,22 @@ export class UserResultsPageComponent {
         this.getResults(event.pageIndex, event.pageSize);
     }
 
+    open() {
+        console.log('test');
+        const modalRef = this.modalService.open(NgbdModalContent);
+        modalRef.componentInstance.name = 'World';
+    }
 }
+
+// @Component({
+//   selector: 'ngbd-modal-component',
+//   templateUrl: './modal-component.html'
+// })
+// export class NgbdModalComponent {
+//   constructor(private modalService: NgbModal) {}
+
+//   open() {
+//     const modalRef = this.modalService.open(NgbdModalContent);
+//     modalRef.componentInstance.name = 'World';
+//   }
+// }

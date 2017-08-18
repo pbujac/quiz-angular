@@ -1,4 +1,4 @@
-<section>
+<section *ngIf="quiz">
 
   <h1>Solve quiz : {{ quiz.title }}</h1>
   <div class="line"></div>
@@ -6,15 +6,23 @@
   <div class="row collapse">
 
     <article class="medium-10 small-12 columns centered">
-      <md-card class="card">
 
-        <qz-pagination [page]="page"></qz-pagination>
+      <md-card *ngIf="!reviewStatus" class="card">
+
+        <qz-pagination (onCancelState)="onCancel($event)"  (onReviewState)="onChangeReviewStatus($event)" [page]="page"></qz-pagination>
 
         <qz-question [page]="page" [quiz]="quiz"></qz-question>
 
         <qz-pagination [page]="page" [nextPrevPagination]="true"></qz-pagination>
 
       </md-card>
+
+      <md-card *ngIf="reviewStatus" class="card">
+
+        <qz-review (onCancelState)="onCancel($event)" (onSelectQuestionPage)="goToQuestionPage($event)"  [quiz]="quiz"></qz-review>
+
+      </md-card>
+
     </article>
   </div>
 </section>

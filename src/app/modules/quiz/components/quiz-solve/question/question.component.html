@@ -4,7 +4,8 @@
 
     <p>{{page.index + 1}}. {{question.text}}</p>
 
-    <qz-answers [answers]="question.answers"></qz-answers>
+    <qz-answers [page]="page" [question]="question" [answers]="question.answers"></qz-answers>
 
   </div>
+
 </div>

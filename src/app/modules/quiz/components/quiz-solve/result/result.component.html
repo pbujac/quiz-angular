@@ -1,0 +1,10 @@
+<div *ngIf="result">
+  <h1>Your score : {{result.score}}</h1>
+
+  <h2> {{ checkPassedQuiz ? 'Passed' : 'Not passed' }}</h2>
+
+  <p>Review answers: </p>
+
+  <qz-result-question [questions]="result.questions"></qz-result-question>
+
+</div>

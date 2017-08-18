@@ -1,0 +1,6 @@
+<div *ngFor="let question of questions">
+
+  <p> Question : {{question.text}}</p>
+  <qz-result-answers [answers]="question.answers"></qz-result-answers>
+
+</div>

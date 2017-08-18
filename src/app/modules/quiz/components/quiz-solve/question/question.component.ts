@@ -1,19 +1,16 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'qz-question',
   templateUrl: './question.component.html',
   styleUrls: ['./question.scss']
 })
-export class QuestionComponent implements OnInit {
+export class QuestionComponent{
 
   @Input() quiz: any;
   @Input() page: any;
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 
   get filteredQuestions() {
