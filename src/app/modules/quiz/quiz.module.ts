@@ -2,20 +2,13 @@ import { QuizService } from './quiz.service';
 import { NgModule, Input, Output } from '@angular/core';
 import { routing } from 'app/modules/quiz/quiz.routes';
 
-import { MdRadioModule,MdCardModule, MdButtonModule, MdPaginatorModule } from '@angular/material';
+import { MdRadioModule, MdCardModule, MdButtonModule, MdPaginatorModule } from '@angular/material';
 import { SharedModule } from 'app/shared/shared.module';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 
 import { UserResultsPageComponent } from './pages/user-results/user-results.page';
-import { NgbdModalContent } from './pages/user-results/modal-component';
-
-// import * as jQuery from 'jquery/dist/jquery';
-
-
-// import { NgbdModalContent, NgbdModalComponent } from './components/modal-result.component'
-
-
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { MdDialogModule } from '@angular/material';
+import { DialogOverviewExampleDialog } from './pages/user-results/modal-result.component';
 
 
 @NgModule({
@@ -27,17 +20,18 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
         MdButtonModule,
         MdPaginatorModule,
         Ng2OrderModule,
-        NgbModule.forRoot()
-        // jQuery
+        MdDialogModule
     ],
     declarations: [
         UserResultsPageComponent,
-        NgbdModalContent
+        DialogOverviewExampleDialog,
     ],
     providers: [
         QuizService
     ],
-      entryComponents: [NgbdModalContent]
+    entryComponents: [
+        DialogOverviewExampleDialog
+    ]
 })
 export class QuizModule {
 
