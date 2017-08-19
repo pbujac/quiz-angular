@@ -8,10 +8,9 @@ import {User} from './model/user.model';
 @Injectable()
 export class AuthService {
 
-  loggedIn : boolean = false;
-
   /**
    * @param {ApiService} api
+   * @param {AuthenticatedGuard} auth
    * @param {Router} router
    */
   constructor(private api: ApiService, private router: Router) {
@@ -20,8 +19,9 @@ export class AuthService {
   /**
    * @returns {boolean}
    */
-  public isAuthenticated() : boolean{
-    return this.loggedIn;
+  public isAuthenticated(): boolean {
+    return !!localStorage.getItem('authentication');
+
   }
 
   /**
@@ -34,7 +34,6 @@ export class AuthService {
     return Observable.create(observer => {
       this.api.post(`users/register`, user).subscribe(result => {
 
-        this.router.navigate(['/login']);
         observer.next(result);
 
       }, err => observer.error(err));
@@ -52,8 +51,6 @@ export class AuthService {
       this.api.post(`login`, user).subscribe(result => {
 
         localStorage.setItem('authentication', result.token);
-        this.router.navigate(['/']);
-        this.loggedIn = true;
         observer.next(result);
 
       }, err => observer.error(err));
@@ -61,10 +58,9 @@ export class AuthService {
   }
 
 
-  public logout() : void{
+  public logout(): void {
 
     localStorage.clear();
-    this.loggedIn = false;
     this.router.navigate(['/login']);
 
   }
