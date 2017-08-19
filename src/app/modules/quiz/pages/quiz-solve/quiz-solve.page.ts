@@ -27,8 +27,8 @@ export class QuizSolveComponent {
     this.reviewStatus = false;
 
     this.route.params.subscribe(params => {
-      let quizId = params['id'];
-      this.loadQuiz(quizId);
+
+      this.loadQuiz(params['id']);
     });
 
   }
