@@ -8,7 +8,8 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
 
 import { UserResultsPageComponent } from './pages/user-results/user-results.page';
 import { MdDialogModule } from '@angular/material';
-import { DialogOverviewExampleDialog } from './pages/user-results/modal-result.component';
+import { DialogComponent } from './pages/user-results/modal-result/modal-result.component';
+import { ResultComponent } from './pages/user-results/result/result.component';
 
 
 @NgModule({
@@ -24,13 +25,14 @@ import { DialogOverviewExampleDialog } from './pages/user-results/modal-result.c
     ],
     declarations: [
         UserResultsPageComponent,
-        DialogOverviewExampleDialog,
+        DialogComponent,
+        ResultComponent
     ],
     providers: [
         QuizService
     ],
     entryComponents: [
-        DialogOverviewExampleDialog
+        DialogComponent
     ]
 })
 export class QuizModule {

@@ -1,8 +1,7 @@
 import { Component, Input, Output } from '@angular/core';
 import { QuizService } from 'app/modules/quiz/quiz.service';
-
-import { DialogOverviewExampleDialog } from './modal-result.component';
 import { MdDialog } from '@angular/material';
+import { DialogComponent } from './modal-result/modal-result.component';
 
 @Component({
     templateUrl: '/user-results.page.html',
@@ -34,8 +33,5 @@ export class UserResultsPageComponent {
     public getResulstByPage(event) {
         this.getResults(event.pageIndex, event.pageSize);
     }
-
-    openDialog() {
-        this.dialog.open(DialogOverviewExampleDialog);
-    }
+    
 }
