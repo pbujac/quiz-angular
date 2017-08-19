@@ -4,7 +4,7 @@
 
   <div class="row">
 
-    <form [formGroup]="registerForm" (ngSubmit)="onRegister()" class="medium-6 small-12  centered columns">
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()" class="large-5 medium-6 small-12  centered columns">
 
       <md-card class="card">
 
@@ -58,7 +58,6 @@
               *ngIf="registerForm.get('username')?.touched && registerForm.get('username')?.hasError('required')">
               Username is required
             </md-error>
-
 
           </md-input-container>
 

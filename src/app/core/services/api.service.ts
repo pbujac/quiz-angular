@@ -23,7 +23,7 @@ export class ApiService {
    * @returns {Headers}
    */
   public createAuthorizationHeader() {
-     let headers = new Headers();
+    let headers = new Headers();
     let key = 'authentication';
 
     if (localStorage.getItem(key) !== null) {
@@ -38,7 +38,7 @@ export class ApiService {
    *
    * @returns {Observable<any>}
    */
-  public get (path: string): Observable<any> {
+  public get(path: string): Observable<any> {
 
     let endpoint = `${this.apiEndpoint}/${path}`;
     let headers = this.createAuthorizationHeader();
@@ -130,7 +130,7 @@ export class ApiService {
       return res;
     }
 
-    return res.json() || {};
+    return res.json() ? res.json() : {};
   }
 
   /**
@@ -144,7 +144,7 @@ export class ApiService {
     if (error.status === 401) {
 
       localStorage.clear();
-      this.router.navigateByUrl('/login');
+      this.router.navigate(['login']);
 
       return Observable.throw({
         error: 'Credentials are incorrect'
