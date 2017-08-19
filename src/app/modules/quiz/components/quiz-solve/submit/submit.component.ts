@@ -26,22 +26,25 @@ export class SubmitComponent {
         result.score = r.score;
         result.questions = r.quiz.questions;
         result.resultAnswers = r.result_answers;
-
-        result.questions.forEach(function (q) {
-
-          q.answers.forEach(function (a) {
-
-            result.resultAnswers.forEach(function (r) {
-              a.selected =  r.answers.some((x => x.id == a.id));
-            });
-
-          })
-        });
-
+        this.checkAllCorrectAnswers(result);
         this.onFinishedState.emit(result);
       },
       err => {
       }
     );
+  }
+
+  /**
+   * @param {Result} result
+   */
+  private checkAllCorrectAnswers(result: Result) {
+
+    result.resultAnswers.forEach(function (rA) {
+
+      rA.question.answers.forEach(function (qA) {
+
+        qA.selected = rA.answers.some((x => x.id === qA.id));
+      })
+    });
   }
 }

@@ -4,9 +4,20 @@
   padding: em(20);
 }
 
-.correct{
+p {
+  font-size: em(12);
+}
+
+.correct {
   background-color: $green;
 }
-.incorrect{
+
+.incorrect {
   background-color: $red;
+}
+
+.material-icons {
+  font-size: em(18);
+  margin: 0 em(10);
+  color: $grey;
 }

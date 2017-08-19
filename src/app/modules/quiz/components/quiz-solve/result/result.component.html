@@ -1,10 +1,31 @@
 <div *ngIf="result">
-  <h1>Your score : {{result.score}}</h1>
 
-  <h2> {{ checkPassedQuiz ? 'Passed' : 'Not passed' }}</h2>
 
-  <p>Review answers: </p>
+  <h1>Your score : <span>{{result.score}}</span> %</h1>
 
-  <qz-result-question [questions]="result.questions"></qz-result-question>
+  <div class="passed" *ngIf="result.score >= maxScore">
+    <p>Well done ! You Passed</p>
+    <img src="/assets/images/user-result/certificate.png" alt="passed">
+  </div>
+
+  <div class="failed" *ngIf="result.score < maxScore">
+    <p>Failed !</p>
+    <img src="/assets/images/user-result/warning.png" alt="not passed">
+  </div>
+
+
+  <div class="review">
+    <h2>Review answers</h2>
+    <h3>You answered: {{result.resultAnswers.length}} / {{result.questions.length}}</h3>
+
+    <qz-result-answers [resultAnswers]="result.resultAnswers"></qz-result-answers>
+
+  </div>
+
+  <button md-button class="centered" (click)="onViewResults()">
+    <i class="material-icons">check</i>
+    View All Results
+  </button>
+
 
 </div>

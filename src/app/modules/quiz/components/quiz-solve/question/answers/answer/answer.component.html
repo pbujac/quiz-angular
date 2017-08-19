@@ -1,11 +1,15 @@
 <div *ngIf="answer" class="answer">
 
-  <md-checkbox [(ngModel)]="answer.selected"
-               (change)="onSelectAnswer();"
-               [checked]="answer.selected"
-               class="display-inline">
-  </md-checkbox>
-
-  <p class="display-inline">{{answer.text}}</p>
-
+  <div class="row">
+    <div class="large-1 columns centered">
+      <md-checkbox [(ngModel)]="answer.selected"
+                   (change)="onSelectAnswer();"
+                   [checked]="answer.selected"
+                   class="display-inline">
+      </md-checkbox>
+    </div>
+    <div class="large-11 columns">
+      <p class="display-inline">{{answer.text}}
+    </div>
+  </div>
 </div>

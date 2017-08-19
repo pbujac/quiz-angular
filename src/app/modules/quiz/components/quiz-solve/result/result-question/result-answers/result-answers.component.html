@@ -1,3 +1,5 @@
-<div *ngFor="let answer of answers">
-  <qz-result-answer [answer]="answer"></qz-result-answer>
+<div *ngFor="let resultAnswer of resultAnswers">
+  <hr>
+  <qz-result-question [question]="resultAnswer.question"></qz-result-question>
+
 </div>

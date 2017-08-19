@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Question} from "../../../../model/question.model";
+import {Question} from "../../../../../../model/question.model";
 
 @Component({
   selector: 'qz-result-question',
@@ -8,7 +8,7 @@ import {Question} from "../../../../model/question.model";
 })
 export class ResultQuestionComponent {
 
-  @Input() questions: Question[];
+  @Input() question: Question;
 
   constructor() {
   }

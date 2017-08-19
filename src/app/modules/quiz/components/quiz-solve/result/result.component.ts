@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Result} from "../../../model/result.model";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'qz-result',
@@ -9,8 +10,13 @@ import {Result} from "../../../model/result.model";
 export class ResultComponent {
 
   @Input() result: Result;
+  protected maxScore: number;
 
-  constructor() {
+  constructor(private router: Router) {
+    this.maxScore = 70;
   }
 
+  public onViewResults(){
+    this.router.navigate(['/home']);
+  }
 }

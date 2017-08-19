@@ -16,7 +16,7 @@ import {ProgressComponent} from "./components/quiz-solve/progress/progress.compo
 import {QuizSolveComponent} from "./pages/quiz-solve/quiz-solve.page";
 import {CancelComponent} from "./components/quiz-solve/cancel/cancel.component";
 import {ResultComponent} from "./components/quiz-solve/result/result.component";
-import {ResultQuestionComponent} from "./components/quiz-solve/result/result-question/result-question.component";
+import {ResultQuestionComponent} from "./components/quiz-solve/result/result-question/result-answers/result-question/result-question.component";
 import {ResultAnswersComponent} from "./components/quiz-solve/result/result-question/result-answers/result-answers.component";
 import {ResultAnswerComponent} from "./components/quiz-solve/result/result-question/result-answers/result-answer/result-answer.component";
 

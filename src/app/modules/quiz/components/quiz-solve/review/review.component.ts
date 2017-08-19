@@ -37,11 +37,4 @@ export class ReviewComponent {
   public checkIsFinishedQuiz(result: Result) {
     this.result = result;
   }
-
-  /**
-   * @returns {boolean}
-   */
-  public checkPassedQuiz(): boolean {
-    return (this.result.score > 49);
-  }
 }

@@ -22,8 +22,7 @@ export class PaginationComponent {
   ngOnChanges() {
 
     if (this.page) {
-      this.calculatePaginationRange(1, this.page.count);
-      this.page.selectedPage = this.page.index + 1;
+      this.goToPage(this.page.index);
     }
   }
 

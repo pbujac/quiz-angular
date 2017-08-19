@@ -15,8 +15,4 @@ export class ProgressComponent {
   public onReview() {
     this.onReviewState.emit(true);
   }
-
-  public onCancel() {
-    this.onReviewState.emit(false);
-  }
 }

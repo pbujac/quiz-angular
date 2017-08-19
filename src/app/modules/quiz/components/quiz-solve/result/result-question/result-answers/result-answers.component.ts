@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Answer} from "../../../../../model/answer.model";
+import {ResultAnswer} from "../../../../../model/result-answer.model";
 
 @Component({
   selector: 'qz-result-answers',
@@ -8,7 +8,7 @@ import {Answer} from "../../../../../model/answer.model";
 })
 export class ResultAnswersComponent {
 
-  @Input() answers: Answer[];
+  @Input() resultAnswers: ResultAnswer[];
 
   constructor() {
   }
