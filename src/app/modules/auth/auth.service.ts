@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs/Rx";
-import {Router} from '@angular/router';
 import 'rxjs/add/operator/toPromise';
 import {ApiService} from "app/core/services/api.service";
 import {User} from './model/user.model';

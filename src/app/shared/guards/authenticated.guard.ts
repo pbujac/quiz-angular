@@ -5,11 +5,6 @@ import {CanActivate, Router} from '@angular/router';
 export class AuthenticatedGuard implements CanActivate {
 
   /**
-   * @type {boolean}
-   */
-  private isLoggedIn: boolean = false;
-
-  /**
    * @param {Router} router
    */
   constructor(private router: Router) {
@@ -21,13 +16,12 @@ export class AuthenticatedGuard implements CanActivate {
   public canActivate(): boolean {
 
     if (localStorage.getItem('authentication')) {
-      this.isLoggedIn = true;
 
-      return this.isLoggedIn;
+      return true;
     }
     this.router.navigate(['/login']);
 
-    return this.isLoggedIn;
+    return false;
   }
 
 }
