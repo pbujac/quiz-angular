@@ -126,11 +126,13 @@ export class ApiService {
    * @returns {any}
    */
   private extractData(res: Response, toJSON: boolean = true) {
+
     if (!toJSON) {
+
       return res;
     }
 
-    return res.json() ? res.json() : {};
+    return res.status === 201 ? {} : res.json() || {};
   }
 
   /**

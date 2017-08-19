@@ -5,9 +5,14 @@ import {AuthenticatedGuard} from "../../shared/guards/authenticated.guard";
 
 const routes: Routes = [
   {
+<<<<<<< HEAD
     path: '',
     component: HomePageComponent,
     canActivate: [AuthenticatedGuard]
+=======
+    path: 'home',
+    component: HomePageComponent
+>>>>>>> task_2603
   }
 ];
 
