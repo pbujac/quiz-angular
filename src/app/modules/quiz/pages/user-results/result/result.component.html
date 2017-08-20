@@ -1,4 +1,8 @@
-  <md-card class="card">
+<div <div *ngIf="!result; else elseTemplate">
+        <h2>You don't have any completed result</h2>
+</div>
+<ng-template #elseTemplate>
+<md-card class="card">
     <md-card-header>
         <md-card-title class="title">
             <h1>{{result.quiz.title}}</h1>
@@ -11,8 +15,8 @@
     <md-card-content>
         <div class="row">
             <div class="large-10 column description">
-                {{result.quiz.description | slice:0:300 }}
-                <button class="btn" *ngIf="result.quiz.description.length>300" (click)="openDialog()">Learn more</button>
+                {{result.quiz.description | slice:0:210 }}
+                    <button class="btn" *ngIf="result.quiz.description.length>300" (click)="openDialog()">Learn more</button>    
             </div>
             <div class="large-2">
                 <div *ngIf="result.score > 69; else elseTemplate">
@@ -26,11 +30,12 @@
     </md-card-content>
 
     <div class="row footer">
-        <div class="large-9 column">
+        <div class="large-8 column">
             Solved at: {{result.created_at * 1000 | date}}
         </div>
-        <div class="large-3 column">
+        <div class="large-4 column">
             Score: {{result.score}} %
         </div>
     </div>
-</md-card>  
+</md-card>    
+</ng-template>

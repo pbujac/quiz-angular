@@ -1,29 +1,21 @@
-    <md-card class="card">
-    <md-card-header class="header">
-        <md-card-title class="title">
-            <h1>{{result.quiz.title}}</h1>
-        </md-card-title>
-        <md-card-subtitle class="subtitle">
-            Category : {{result.quiz.category.title}}
-        </md-card-subtitle>
-    </md-card-header>
+<h1 class="title" md-dialog-title>{{result.quiz.title}}</h1>
+ <div class="subtitle" >Category: {{result.quiz.category.title}}</div> 
 
-    <md-card-content>
-        <div class="row">
-            <div class="large-10 column description">
-                {{result.quiz.description | slice:0:300 }}
-                <button class="btn" *ngIf="result.quiz.description.length>300" (click)="openDialog()">Learn more</button>
-            </div>
-            <div class="large-2">
-                <div *ngIf="result.score > 69; else elseTemplate">
-                    <img class="image" src="assets/images/user-result/good-result1.png">
-                </div>
-                <ng-template #elseTemplate>
-                    <img class="image" src="assets/images/user-result/bad-result1.png">
-                </ng-template>
-            </div>
+<md-dialog-content>
+
+    <div class="row">
+        <div class="large-10 column description">
+           <p> {{result.quiz.description}}</p>
         </div>
-    </md-card-content>
+        <div class="large-2">
+            <div *ngIf="result.score > 69; else elseTemplate">
+                <img class="image" src="assets/images/user-result/good-result1.png">
+            </div>
+            <ng-template #elseTemplate>
+                <img class="image" src="assets/images/user-result/bad-result1.png">
+            </ng-template>
+        </div>
+    </div>
 
     <div class="row footer">
         <div class="large-9 column">
@@ -33,4 +25,9 @@
             Score: {{result.score}} %
         </div>
     </div>
-</md-card>    
+
+</md-dialog-content>
+
+<md-dialog-actions >
+    <button md-button md-dialog-close>Close</button>
+</md-dialog-actions>

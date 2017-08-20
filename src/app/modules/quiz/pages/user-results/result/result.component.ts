@@ -2,7 +2,6 @@ import { Component, Input, Output } from '@angular/core';
 import { MdDialog } from '@angular/material';
 import { DialogComponent } from '../modal-result/modal-result.component';
 
-
 @Component({
     selector: 'result',
     templateUrl: './result.component.html',
@@ -20,5 +19,4 @@ export class ResultComponent {
             data: this.result
         });
     }
-
 }
