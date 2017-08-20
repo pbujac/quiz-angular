@@ -1,11 +1,11 @@
 <h1 class="title" md-dialog-title>{{result.quiz.title}}</h1>
- <div class="subtitle" >Category: {{result.quiz.category.title}}</div> 
+<div class="subtitle">Category: {{result.quiz.category.title}}</div>
 
 <md-dialog-content>
 
     <div class="row">
         <div class="large-10 column description">
-           <p> {{result.quiz.description}}</p>
+            <p> {{result.quiz.description}}</p>
         </div>
         <div class="large-2">
             <div *ngIf="result.score > 69; else elseTemplate">
@@ -28,6 +28,6 @@
 
 </md-dialog-content>
 
-<md-dialog-actions >
+<md-dialog-actions>
     <button md-button md-dialog-close>Close</button>
 </md-dialog-actions>

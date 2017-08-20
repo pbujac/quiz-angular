@@ -1,7 +1,3 @@
-<div <div *ngIf="!result; else elseTemplate">
-        <h2>You don't have any completed result</h2>
-</div>
-<ng-template #elseTemplate>
 <md-card class="card">
     <md-card-header>
         <md-card-title class="title">
@@ -16,7 +12,7 @@
         <div class="row">
             <div class="large-10 column description">
                 {{result.quiz.description | slice:0:210 }}
-                    <button class="btn" *ngIf="result.quiz.description.length>300" (click)="openDialog()">Learn more</button>    
+                <button class="btn" *ngIf="result.quiz.description.length>100" (click)="openDialog()">Learn more</button>
             </div>
             <div class="large-2">
                 <div *ngIf="result.score > 69; else elseTemplate">
@@ -37,5 +33,4 @@
             Score: {{result.score}} %
         </div>
     </div>
-</md-card>    
-</ng-template>
+</md-card>

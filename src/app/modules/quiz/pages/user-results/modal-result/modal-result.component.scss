@@ -1,13 +1,13 @@
 @import "src/assets/sass/utils/utils";
 
 h1{
-    color: $richBlack;
+    color: $rich-black;
     margin: em(0) em(25) 0;
 }
 
 .subtitle{
     margin-left: em(25);
-    color: gray;
+    color: $pale-aqua;
 }
 
 p{
@@ -21,6 +21,6 @@ img{
 }
 
 .footer{
-    color:$sacramentoStateGreen;
+    color:$sacramento-state-green;
     margin: em(0) em(0) em(10) em(30);
 }

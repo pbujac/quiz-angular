@@ -13,7 +13,7 @@ export class UserResultsPageComponent {
     length: number;
 
     @Input() pageSize = 10;
-    @Input() pageSizeOptions = [2, 10, 20, 40, 100];
+    @Input() pageSizeOptions = [3, 10, 20, 40, 100];
     @Input() pageIndex: number = 0;
     @Output() page: number;
 
@@ -33,5 +33,8 @@ export class UserResultsPageComponent {
     public getResulstByPage(event) {
         this.getResults(event.pageIndex, event.pageSize);
     }
-    
+
+    demo(result :any){
+        console.log(result);
+    }
 }

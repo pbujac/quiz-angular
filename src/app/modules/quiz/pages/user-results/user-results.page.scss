@@ -3,6 +3,10 @@
 section{
     padding: em(20) em(40) 0;
     text-align: center;
+
+    div h1{
+        color: $red;
+    }
     
     .line{
         border-top: em(5) solid $yellow;
