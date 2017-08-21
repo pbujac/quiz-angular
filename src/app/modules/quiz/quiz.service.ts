@@ -7,6 +7,35 @@ import { Observable } from "rxjs/Rx";
 @Injectable()
 export class QuizService {
     constructor(private api: ApiService) {
+
+    }
+
+    public getQuizCategories(): Observable<any> {
+
+        return Observable.create(observer => {
+            this.api.get(`categories`).subscribe(result => {
+                observer.next(result._embedded.categories);
+            }, err => observer.error(err));
+        });
+    }
+
+    public getQuizById(id: number): Observable<any> {
+
+        return Observable.create(observer => {
+
+            this.api.get('quizzes/'+id).subscribe(result => {
+                observer.next(result);
+            }, err => observer.error(err));
+        });
+    }
+
+    public getQuizzeseByCategory(id: number): Observable<any> {
+
+        return Observable.create(observer => {
+            this.api.get('category/' + id + '/quizzes').subscribe(result => {
+                observer.next(result._embedded.quizzes);
+            }, err => observer.error(err));
+        });
     }
 
     public getUserResults(page: number, count: number) {
@@ -20,4 +49,5 @@ export class QuizService {
     public incrementPage(page: number){
         return ++page;
     }
+
 }
