@@ -12,6 +12,10 @@ const appRoutes: Routes = [
     loadChildren: './modules/home/home.module#HomeModule'
   },
   {
+    path: 'auth',
+    loadChildren: './modules/auth/auth.module#AuthModule'
+  },
+  {
     path: 'quiz',
     loadChildren: './modules/quiz/quiz.module#QuizModule'
   }

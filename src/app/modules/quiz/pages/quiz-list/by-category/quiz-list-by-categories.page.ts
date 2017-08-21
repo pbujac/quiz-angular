@@ -1,26 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { QuizService } from '../../../quiz.service';
+import {Component, OnInit} from '@angular/core';
+import {QuizService} from '../../../quiz.service';
 
 @Component({
-    templateUrl: "/quiz-list-by-categories.page.html"
+  templateUrl: "/quiz-list-by-categories.page.html",
+  styleUrls: ['quiz-list-by-categories.scss']
 })
 export class QuizListByCategoriesPageComponent {
 
-id: number;
-quizzes: any;
+  id: number;
+  quizzes: any;
 
-ngOnInit() { 
-    }
+  ngOnInit() {
+  }
 
-receiveValue($event){
-        this.id=$event ;
-        this.getQuizesByCategory(this.id);     
-    }
+  receiveValue($event) {
+    this.id = $event;
+    this.getQuizesByCategory(this.id);
+  }
 
-constructor(private quizService: QuizService) {
-    }
+  constructor(private quizService: QuizService) {
+  }
 
-getQuizesByCategory(id:number){
-        this.quizzes = this.quizService.getQuizzeseByCategory(id);
-    }
+  getQuizesByCategory(id: number) {
+    this.quizzes = this.quizService.getQuizzeseByCategory(id);
+  }
 }

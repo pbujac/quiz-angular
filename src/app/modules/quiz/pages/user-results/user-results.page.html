@@ -1,50 +1,21 @@
 <section>
-    <!-- <div class="container"> -->
-    <h1> My Result </h1>
+
+    <h1> My Results </h1>
     <div class="line"></div>
 
-
     <div class="row">
-        <div class="large-4 columns" *ngFor="let result of results | orderBy: 'created_at' : true">
-            <md-card class="card">
-                <md-card-header class="header">
-                    <md-card-title class="title">
-                        {{result.quiz.title}}
-                    </md-card-title>
-                    <md-card-subtitle class="subtitle">
-                        Category : {{result.quiz.category.title}}
-                    </md-card-subtitle>
-                </md-card-header>
-
-                <md-card-content>
-                    <div class="row">
-                        <div class="large-10 column description">
-                            {{result.quiz.description | slice:0:350 }}
-                        </div>
-                        <div class="large-2">
-                            <div *ngIf="result.score > 69; else elseTemplate">
-                                <img class="image" src="assets/images/user-result/good-result.png">
-                            </div>
-                            <ng-template #elseTemplate>
-                                <img class="image" src="assets/images/user-result/bad-result.png">
-                            </ng-template>
-                        </div>
-                    </div>
-                </md-card-content>
-
-                <div class="row footer">
-                    <div class="large-9 column date">
-                        Solved at: {{result.created_at * 1000 | date}}
-                    </div>
-                    <div class="large-3 column">
-                        Score: {{result.score}} %
-                    </div>
-                </div>
-            </md-card>
+        <div *ngIf="length===0; else elseTemplate">
+            <h1>You have no results</h1>
         </div>
+        <ng-template #elseTemplate>
+            <div class="large-4 columns" *ngFor="let result of results | orderBy: 'created_at' : true">
+                <result [result]="result"></result>
+            </div>
+        </ng-template>
     </div>
-    <md-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [pageIndex]="pageIndex" (page)="getResulstByPage($event)">
 
+    <md-paginator *ngIf="length>0" [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [pageIndex]="pageIndex"
+        (page)="getResulstByPage($event)">
     </md-paginator>
-    <!-- </div> -->
+
 </section>

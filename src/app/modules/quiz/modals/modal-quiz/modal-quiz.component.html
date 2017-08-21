@@ -1,13 +1,15 @@
-<md-card class="quiz-card">
-  <md-card-header>
-   <md-card-title>Title: {{quiz.title}}</md-card-title>
-  </md-card-header>
-  <md-card-content>
-     <p>
-      Description: {{quiz.description | slice:0:140 }}
-     </p>
-  </md-card-content>
-  <md-card-actions>
-    <button md-button routerLink="/quiz-solve/{{quiz.id}}"> Try it</button>
-  </md-card-actions>
-</md-card> 
+<section>
+  <h1> Quiz Information </h1>
+  <div class="line"></div>
+
+  <h2>Title: {{quiz.title}}</h2>
+
+  <p>
+    <span>Description:</span>
+    {{quiz.description }}
+  </p>
+  <button md-button routerLink="/quiz-solve/{{quiz.id}}">
+    <i class="material-icons">keyboard_tab</i>
+    Take the test
+  </button>
+</section>

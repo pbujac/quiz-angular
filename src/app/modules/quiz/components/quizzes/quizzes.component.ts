@@ -3,11 +3,11 @@ import { MdDialog } from '@angular/material';
 import { QuizDialogComponent } from 'app/modules/quiz/modals/modal-quizzes/modal-quizzes.component';
 
 @Component({
-    selector: 'quiz',
+    selector: 'quizzes',
     templateUrl: './quizzes.component.html',
     styleUrls: ['quizzes.component.scss']
 })
-export class QuizComponent {
+export class QuizzesComponent {
 
     @Input() quiz: any;
 

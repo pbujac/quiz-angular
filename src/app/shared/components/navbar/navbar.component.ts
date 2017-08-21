@@ -10,7 +10,4 @@ export class NavbarComponent {
   constructor() {
   }
 
-  public onLogout(): void {
-  }
-
 }

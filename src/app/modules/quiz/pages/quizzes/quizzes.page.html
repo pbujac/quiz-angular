@@ -3,7 +3,7 @@
     <div class="line"></div>
     <div class="row">
         <div class="large-3 columns" *ngFor="let quiz of quizzes ">
-            <quiz [quiz]="quiz"></quiz>
+            <quizzes [quiz]="quiz"></quizzes>
         </div>
     </div>
     <md-paginator class="card-paginator" [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [pageIndex]="pageIndex"
