@@ -13,6 +13,9 @@ export class QuestionComponent{
   constructor() {
   }
 
+  /**
+   * @returns {T[] | Array}
+   */
   get filteredQuestions() {
     return (this.quiz.questions) ?
       this.quiz.questions.slice(this.page.index, this.page.index + this.page.size) : [];

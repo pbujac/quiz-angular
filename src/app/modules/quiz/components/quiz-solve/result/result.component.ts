@@ -12,11 +12,14 @@ export class FinalResultComponent {
   @Input() result: Result;
   protected maxScore: number;
 
+  /**
+   * @param {Router} router
+   */
   constructor(private router: Router) {
     this.maxScore = 70;
   }
 
   public onViewResults(){
-    this.router.navigate(['/home']);
+    this.router.navigate(['/user-results']);
   }
 }

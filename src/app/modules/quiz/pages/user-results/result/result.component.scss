@@ -1,6 +1,7 @@
 @import "src/assets/sass/utils/utils";
 
 .card {
+  padding: em(25) em(20) em(45);
   background-color: $bubbles;
   margin: 15px 20px;
   border-style: outset;
