@@ -12,7 +12,7 @@
         <div class="row">
             <div class="large-10 column description">
                 {{result.quiz.description | slice:0:210 }}
-                <button class="btn" *ngIf="result.quiz.description.length>100" (click)="openDialog()">Learn more</button>
+                <button class="btn" *ngIf="result.quiz.description.length>210" (click)="openDialog()">Learn more</button>
             </div>
             <div class="large-2">
                 <div *ngIf="result.score > 69; else elseTemplate">
