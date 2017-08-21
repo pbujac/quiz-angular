@@ -33,8 +33,4 @@ export class UserResultsPageComponent {
     public getResulstByPage(event) {
         this.getResults(event.pageIndex, event.pageSize);
     }
-
-    demo(result :any){
-        console.log(result);
-    }
 }

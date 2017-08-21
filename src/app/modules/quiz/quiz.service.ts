@@ -7,7 +7,6 @@ import { Observable } from "rxjs/Rx";
 @Injectable()
 export class QuizService {
     constructor(private api: ApiService) {
-
     }
 
     public getUserResults(page: number, count: number) {
