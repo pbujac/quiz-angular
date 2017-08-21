@@ -11,8 +11,8 @@
   <md-card-content>
     <div class="row">
       <div class="large-10 medium-12 columns description">
-        {{result.quiz.description | slice:0:210 }}
-        <button class="btn" *ngIf="result.quiz.description.length>210" (click)="openDialog()">Learn more</button>
+        {{result.quiz.description | slice:0:100 }}
+        <button class="btn" *ngIf="result.quiz.description.length>100" (click)="openDialog()">Learn more</button>
       </div>
       <div class="large-2 medium-12 columns">
         <div *ngIf="result.score > 69; else elseTemplate">

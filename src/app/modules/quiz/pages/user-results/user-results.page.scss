@@ -1,10 +1,8 @@
 @import "src/assets/sass/utils/utils";
 
 section {
-
-  div h1 {
-    color: $red;
-  }
+  padding: em(20) em(40) 0;
+  text-align: center;
 
   .line {
     border-top: em(5) solid $yellow;
@@ -12,10 +10,4 @@ section {
     margin: 0 auto em(10);
   }
 
-  md-paginator {
-    background-color: $natural-white;
-  }
-
 }
-
-

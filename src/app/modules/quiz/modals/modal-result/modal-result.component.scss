@@ -11,7 +11,7 @@ h1{
 }
 
 p{
-    margin-left: em(10); 
+    margin-left: em(10);
 }
 
 img{
@@ -23,4 +23,11 @@ img{
 .footer{
     color:$sacramento-state-green;
     margin: em(0) em(0) em(10) em(30);
+}
+md-dialog-actions{
+  padding: 0 em(20) em(20);
+  button{
+    background-color: $black;
+    color: $white;
+  }
 }

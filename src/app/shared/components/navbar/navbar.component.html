@@ -2,22 +2,29 @@
 
   <h1>Brand</h1>
 
-  <a *ngIf="isAuthenticated()" [routerLink]="['/home']" [routerLinkActive]="['active']" class="align-left">
+  <a [routerLink]="['/home']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']" class="align-left">
     <i class="material-icons">home</i>
     Home
   </a>
 
-  <a *ngIf="isAuthenticated()" [routerLink]="['/quiz-list-by-categories/all']" [routerLinkActive]="['active']"
+  <a [routerLink]="['/quizzes']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']"
      class="align-left">
     <i class="material-icons">list</i>
     Quizzes
   </a>
-  <a *ngIf="isAuthenticated()" [routerLink]="['/categories']" [routerLinkActive]="['active']" class="align-left">
+
+  <a [routerLink]="['/quiz-list-by-categories/all']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']"
+     class="align-left">
+    <i class="material-icons">list</i>
+    Quizzes Category
+  </a>
+
+  <a [routerLink]="['/categories']"  *ngIf="isAuthenticated()"   [routerLinkActive]="['active']" class="align-left">
     <i class="material-icons">lightbulb_outline</i>
     Categories
   </a>
 
-  <a *ngIf="isAuthenticated()" [routerLink]="['/user-results']" [routerLinkActive]="['active']" class="align-left">
+  <a [routerLink]="['/user-results']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']" class="align-left">
     <i class="material-icons">playlist_add_check</i>
     Results
   </a>
@@ -37,6 +44,5 @@
     <i class="material-icons">perm_identity</i>
     Logout
   </a>
-
 
 </nav>
