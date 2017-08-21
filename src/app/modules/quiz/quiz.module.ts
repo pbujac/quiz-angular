@@ -2,7 +2,6 @@ import { QuizCategoryComponent } from "app/modules/quiz/components/quiz-category
 import { QuizCategoriesPageComponent } from "app/modules/quiz/pages/quiz-categories/quiz-categories.page";
 import { QuizListByCategoriesPageComponent } from "app/modules/quiz/pages/quiz-list/category/quiz-list-by-categories.page";
 import { QuizComponent } from "app/modules/quiz/components/quiz/quiz.component";
-import { QuizObserver } from "app/modules/quiz/components/quiz/quiz.component";
 import { QuizCategorySelectorComponent } from "app/modules/quiz/pages/quiz-list/category/selector/quiz-category-selector";
 import { QuizModal } from 'app/modules/quiz/components/quiz/modal/modal-quiz.component';
 
@@ -30,7 +29,6 @@ import { MdDialogModule } from '@angular/material';
         QuizCategoriesPageComponent,
         QuizCategoryComponent,
         QuizComponent,
-        QuizObserver,
         QuizCategorySelectorComponent,
         QuizListByCategoriesPageComponent,
         QuizModal
@@ -39,7 +37,7 @@ import { MdDialogModule } from '@angular/material';
         QuizService
     ],
     entryComponents: [
-        QuizObserver
+        QuizModal
     ]
 
 })

@@ -1,25 +1,17 @@
-import {Component} from '@angular/core';
+import {Component ,Input, Inject} from '@angular/core';
 import {MdDialog} from '@angular/material';
-import { QuizService } from '../../../quiz.service';
-import { QuizComponent } from '../quiz.component';
+import { MD_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'quiz-modal',
   templateUrl: '/modal-quiz.component.html',
-  inputs: ['quiz']
 })
-
 export class QuizModal {
-
-  quiz: any;
-  id: number;
-  
-  constructor(private quizService: QuizService) {
+   
+  constructor(@Inject(MD_DIALOG_DATA) public quiz: any) {
     }
 
- getQuizById(id:number){
-        this.quiz = this.quizService.getQuizzeseByCategory(id);
-    }
 }
+
 
  
