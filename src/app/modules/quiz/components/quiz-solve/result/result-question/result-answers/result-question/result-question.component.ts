@@ -9,6 +9,7 @@ import {Question} from "../../../../../../model/question.model";
 export class ResultQuestionComponent {
 
   @Input() question: Question;
+  @Input() index: number;
 
   constructor() {
   }

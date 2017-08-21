@@ -1,5 +1,5 @@
-<div *ngFor="let resultAnswer of resultAnswers">
+<div *ngFor="let resultAnswer of resultAnswers; let i = index">
   <hr>
-  <qz-result-question [question]="resultAnswer.question"></qz-result-question>
+  <qz-result-question [question]="resultAnswer.question" [index]="i"></qz-result-question>
 
 </div>
