@@ -14,6 +14,10 @@ const appRoutes: Routes = [
   {
     path: 'auth',
     loadChildren: './modules/auth/auth.module#AuthModule'
+  },
+  {
+    path: 'quiz',
+    loadChildren: './modules/quiz/quiz.module#QuizModule'
   }
 ];
 
