@@ -2,7 +2,7 @@ import { QuizCategoryComponent } from "app/modules/quiz/components/quiz-category
 import { QuizCategoriesPageComponent } from "app/modules/quiz/pages/quiz-categories/quiz-categories.page";
 import { QuizListByCategoriesPageComponent } from "app/modules/quiz/pages/quiz-list/category/quiz-list-by-categories.page";
 import { QuizComponent } from "app/modules/quiz/components/quiz/quiz.component";
-import { QuizCategorySelectorComponent } from "app/modules/quiz/pages/quiz-list/category/selector/quiz-category-selector";
+import { QuizCategorySelectorComponent } from "app/modules/quiz/components/category-selector/quiz-category-selector";
 import { QuizModal } from 'app/modules/quiz/components/quiz/modal/modal-quiz.component';
 import { DialogComponent } from './pages/user-results/modal-result/modal-result.component';
 import { ResultComponent } from './pages/user-results/result/result.component';
