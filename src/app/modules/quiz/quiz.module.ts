@@ -4,8 +4,12 @@ import { QuizListByCategoriesPageComponent } from "app/modules/quiz/pages/quiz-l
 import { QuizComponent } from "app/modules/quiz/components/quiz/quiz.component";
 import { QuizCategorySelectorComponent } from "app/modules/quiz/pages/quiz-list/category/selector/quiz-category-selector";
 import { QuizModal } from 'app/modules/quiz/components/quiz/modal/modal-quiz.component';
+import { DialogComponent } from './pages/user-results/modal-result/modal-result.component';
+import { ResultComponent } from './pages/user-results/result/result.component';
+import { UserResultsPageComponent } from './pages/user-results/user-results.page';
 
-import {MdRadioModule,MdCardModule, MdButtonModule, MdSelectModule} from '@angular/material';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import {MdRadioModule,MdCardModule, MdButtonModule, MdSelectModule, MdPaginatorModule} from '@angular/material';
 import { SharedModule } from "app/shared/shared.module";
 import { QuizService } from './quiz.service';
 import { NgModule } from '@angular/core';
@@ -22,6 +26,8 @@ import { MdDialogModule } from '@angular/material';
         MdCardModule,
         FormsModule,
         MdButtonModule,
+        MdPaginatorModule,
+        Ng2OrderModule,
         MdSelectModule,
         MdDialogModule
     ],
@@ -31,13 +37,17 @@ import { MdDialogModule } from '@angular/material';
         QuizComponent,
         QuizCategorySelectorComponent,
         QuizListByCategoriesPageComponent,
-        QuizModal
+        QuizModal,
+        UserResultsPageComponent,
+        DialogComponent,
+        ResultComponent
     ],
     providers: [
         QuizService
     ],
     entryComponents: [
-        QuizModal
+        QuizModal,
+        DialogComponent
     ]
 })
 export class QuizModule {

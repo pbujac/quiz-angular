@@ -37,4 +37,17 @@ export class QuizService {
             }, err => observer.error(err));
         });
     }
+
+    public getUserResults(page: number, count: number) {
+        return Observable.create(observer => {
+            this.api.get(`user/results?page=` + this.incrementPage(page) + `&count=` + count).subscribe(result => {
+                observer.next(result);
+            }, err => observer.error(err));
+        });
+    }
+
+    public incrementPage(page: number){
+        return ++page;
+    }
+
 }
