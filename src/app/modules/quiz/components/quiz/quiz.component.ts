@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {MdDialog} from '@angular/material';
-
 import {QuizModal} from '../../modals/modal-quiz/modal-quiz.component';
 
 @Component({

@@ -15,7 +15,7 @@ export class ResultComponent {
     }
 
     openDialog() {
-        let dialogRef = this.dialog.open(ResultModal, {
+         this.dialog.open(ResultModal, {
             data: this.result
         });
     }

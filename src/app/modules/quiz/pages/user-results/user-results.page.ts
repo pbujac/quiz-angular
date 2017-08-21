@@ -20,7 +20,7 @@ export class UserResultsPageComponent {
     }
 
     public getResults(page: number, count: number) {
-        this.quizService.getUserResults(page, count).subscribe(
+         this.quizService.getUserResults(page, count).subscribe(
             result => {
                 this.results = result._embedded.results;
                 this.length = result.total;

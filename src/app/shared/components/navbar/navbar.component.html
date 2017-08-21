@@ -7,11 +7,18 @@
     Home
   </a>
 
-  <a [routerLink]="['/quiz-list-by-categories/all']"[routerLinkActive]="['active']"
+  <a [routerLink]="['/quizzes']"[routerLinkActive]="['active']"
      class="align-left">
     <i class="material-icons">list</i>
     Quizzes
   </a>
+
+  <a [routerLink]="['/quiz-list-by-categories/all']"[routerLinkActive]="['active']"
+     class="align-left">
+    <i class="material-icons">list</i>
+    Quizzes Category
+  </a>
+
   <a [routerLink]="['/categories']"  [routerLinkActive]="['active']" class="align-left">
     <i class="material-icons">lightbulb_outline</i>
     Categories
