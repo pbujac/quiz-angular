@@ -39,7 +39,6 @@ import { MdDialogModule } from '@angular/material';
     entryComponents: [
         QuizModal
     ]
-
 })
 export class QuizModule {
 
