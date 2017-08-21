@@ -1,7 +1,5 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, Output} from '@angular/core';
 import { QuizService } from 'app/modules/quiz/quiz.service';
-import { MdDialog } from '@angular/material';
-import { ResultModal } from '../../modals/modal-result/modal-result.component';
 
 @Component({
     templateUrl: '/user-results.page.html',
@@ -13,11 +11,11 @@ export class UserResultsPageComponent {
     length: number;
 
     @Input() pageSize = 10;
-    @Input() pageSizeOptions = [10, 20, 40, 100];
+    @Input() pageSizeOptions = [2, 10, 20, 40, 100];
     @Input() pageIndex: number = 0;
     @Output() page: number;
 
-    constructor(private quizService: QuizService, private dialog: MdDialog) {
+    constructor(private quizService: QuizService) {
         this.getResults(this.pageIndex, this.pageSize);
     }
 
@@ -33,4 +31,5 @@ export class UserResultsPageComponent {
     public getResulstByPage(event) {
         this.getResults(event.pageIndex, event.pageSize);
     }
+
 }
