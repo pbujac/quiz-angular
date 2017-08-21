@@ -1,11 +1,12 @@
 @import "src/assets/sass/utils/utils";
 
 .card {
-  padding: em(25) em(20) em(45);
   background-color: $bubbles;
   margin: 15px 20px;
+  padding: 25px;
   border-style: outset;
   border-width: 1px 1px 3px 1px;
+  min-height: 250px;
 
   .title {
     font-size: 18px;
@@ -13,7 +14,7 @@
   }
 
   .description {
-    padding: em(0) em(20);
+    padding: 10px 15px 25px;
     color: $rich-black;
     font-style: italic;
     text-align: left;
@@ -22,12 +23,13 @@
   .footer {
     color: $sacramento-state-green;
     text-align: left;
-    padding-left: em(30);
+    padding-left: 30px;
   }
-
-  img {
-    width: 100%;
-    height: 100%;
-    max-width: em(100);
+  .image {
+    padding: 0;
+    img {
+      width: 100%;
+      max-width: em(150);
+    }
   }
 }

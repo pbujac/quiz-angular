@@ -6,6 +6,7 @@ import {
   MdButtonModule,
   MdPaginatorModule,
   MdCheckboxModule,
+  MdSelectModule,
   MdDialogModule
 } from '@angular/material';
 import {UserResultsPageComponent} from './pages/user-results/user-results.page'
@@ -25,9 +26,18 @@ import {CancelComponent} from "./components/quiz-solve/cancel/cancel.component";
 import {ResultQuestionComponent} from "./components/quiz-solve/result/result-question/result-answers/result-question/result-question.component";
 import {ResultAnswersComponent} from "./components/quiz-solve/result/result-question/result-answers/result-answers.component";
 import {ResultAnswerComponent} from "./components/quiz-solve/result/result-question/result-answers/result-answer/result-answer.component";
-import {DialogComponent} from './pages/user-results/modal-result/modal-result.component';
 import {ResultComponent} from "./pages/user-results/result/result.component";
 import {FinalResultComponent} from "./components/quiz-solve/result/result.component";
+import {QuizCategoriesPageComponent} from "app/modules/quiz/pages/quiz-categories/quiz-categories.page";
+import {QuizListByCategoriesPageComponent} from "app/modules/quiz/pages/quiz-list/by-category/quiz-list-by-categories.page";
+import {QuizModal} from "./modals/modal-quiz/modal-quiz.component";
+import {QuizCategoryComponent} from "./components/quiz-category/quiz-category.component";
+import {QuizComponent} from "./components/quiz/quiz.component";
+import {QuizCategorySelectorComponent} from "./components/category-selector/quiz-category-selector";
+import {ResultModal} from "./modals/modal-result/modal-result.component";
+import {QuizzesPageComponent} from "./pages/quiz-list/all-quizzes/quizzes.page";
+import {QuizDialogComponent} from "./modals/modal-quizzes/modal-quizzes.component";
+import {QuizzesComponent} from "./components/quizzes/quizzes.component";
 
 @NgModule({
   imports: [
@@ -40,6 +50,8 @@ import {FinalResultComponent} from "./components/quiz-solve/result/result.compon
     MdCheckboxModule,
     MdPaginatorModule,
     Ng2OrderModule,
+    MdSelectModule,
+    FormsModule,
     MdDialogModule
   ],
   declarations: [
@@ -58,13 +70,24 @@ import {FinalResultComponent} from "./components/quiz-solve/result/result.compon
     ResultQuestionComponent,
     ResultAnswersComponent,
     ResultAnswerComponent,
-    DialogComponent
+    QuizCategoriesPageComponent,
+    QuizCategoryComponent,
+    QuizComponent,
+    QuizCategorySelectorComponent,
+    QuizListByCategoriesPageComponent,
+    QuizModal,
+    ResultModal,
+    QuizzesComponent,
+    QuizzesPageComponent,
+    QuizDialogComponent
   ],
   providers: [
     QuizService
   ],
   entryComponents: [
-    DialogComponent
+    QuizModal,
+    ResultModal,
+    QuizDialogComponent
   ]
 })
 export class QuizModule {

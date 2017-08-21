@@ -2,37 +2,45 @@
 
   <h1>Brand</h1>
 
-  <a routerLink="/home" *ngIf="isAuthenticated()"  [routerLinkActive]="['active']" class="align-left">
+  <a [routerLink]="['/home']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']" class="align-left">
     <i class="material-icons">home</i>
     Home
   </a>
 
-  <a  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']" class="align-left">
+  <a [routerLink]="['/quizzes']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']"
+     class="align-left">
     <i class="material-icons">list</i>
     Quizzes
   </a>
-  <a *ngIf="isAuthenticated()"  [routerLinkActive]="['active']" class="align-left">
+
+  <a [routerLink]="['/quiz-list-by-categories/all']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']"
+     class="align-left">
+    <i class="material-icons">list</i>
+    Quizzes Category
+  </a>
+
+  <a [routerLink]="['/categories']"  *ngIf="isAuthenticated()"   [routerLinkActive]="['active']" class="align-left">
     <i class="material-icons">lightbulb_outline</i>
     Categories
   </a>
 
-  <a routerLink="/user-results" *ngIf="isAuthenticated()"  [routerLinkActive]="['active']" class="align-left">
+  <a [routerLink]="['/user-results']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']" class="align-left">
     <i class="material-icons">playlist_add_check</i>
     Results
   </a>
 
-  <a routerLink="/register" *ngIf="!isAuthenticated()"  [routerLinkActive]="['active']" class="align-right">
-    <i class="material-icons">person_add</i>
-    Register
-  </a>
-
-  <a routerLink="/login" *ngIf="!isAuthenticated()"  [routerLinkActive]="['active']" class="align-right">
+  <a [routerLink]="['/login']" *ngIf="!isAuthenticated()" [routerLinkActive]="['active']" class="align-right">
     <i class="material-icons">perm_identity</i>
     Login
   </a>
 
 
-  <a *ngIf="isAuthenticated()"  (click)="onLogout()"  [routerLinkActive]="['active']" class="align-right">
+  <a [routerLink]="['/register']" *ngIf="!isAuthenticated()" [routerLinkActive]="['active']" class="align-right">
+    <i class="material-icons">person_add</i>
+    Register
+  </a>
+
+  <a *ngIf="isAuthenticated()" (click)="onLogout()" [routerLinkActive]="['active']" class="align-right">
     <i class="material-icons">perm_identity</i>
     Logout
   </a>

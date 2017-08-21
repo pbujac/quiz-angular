@@ -15,25 +15,38 @@ export class QuizService {
    * @param {ApiService} api
    */
   constructor(private api: ApiService) {
-
   }
 
-  /**
-   * @param {number} page
-   * @param {number} count
-   *
-   * @returns {any}
-   */
-  public getUserResults(page: number, count: number) {
+  public getQuizzeseByCategory(id: number): Observable<any> {
 
     return Observable.create(observer => {
+      this.api.get('category/' + id + '/quizzes').subscribe(result => {
+        observer.next(result._embedded.quizzes);
+      }, err => observer.error(err));
+    });
+  }
 
+  public getUserResults(page: number, count: number) {
+    return Observable.create(observer => {
       this.api.get(`user/results?page=` + this.incrementPage(page) + `&count=` + count).subscribe(result => {
         observer.next(result);
       }, err => observer.error(err));
     });
-
   }
+
+  public incrementPage(page: number){
+    return ++page;
+  }
+
+  public getQuizzes(page: number, count:number): Observable<any>  {
+
+    return Observable.create(observer => {
+      this.api.get('quizzes?page='+ this.incrementPage(page) +'&count='+count).subscribe(result => {
+        observer.next(result);
+      }, err => observer.error(err));
+    });
+  }
+
 
   /**
    * @returns {Observable<any>}
@@ -130,12 +143,4 @@ export class QuizService {
     });
   }
 
-  /**
-   * @param {number} page
-   *
-   * @returns {number}
-   */
-  public incrementPage(page: number) {
-    return ++page;
-  }
 }

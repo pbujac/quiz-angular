@@ -24,7 +24,11 @@ button, .btn {
 .btn-cancel {
   background-color: $red;
 }
-button.selected{
+
+.btn-info{
+  background-color: $grey;
+}
+button.selected {
   background-color: $yellow;
   color: $white;
 }
