@@ -1,7 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
 import { PageEvent } from '@angular/material';
 import { QuizService } from "app/modules/quiz/quiz.service";
-import { MdDialog } from '@angular/material';
 
 @Component({
   templateUrl: "./quizzes.page.html",
@@ -14,11 +13,11 @@ export class QuizzesPageComponent {
   quizzes: any;
   length: any;
   @Input() pageIndex: number = 1;
-  @Input() pageSize = 10;
-  @Input() pageSizeOptions = [5, 10, 25, 100];
+  @Input() pageSize = 8;
+  @Input() pageSizeOptions = [8, 16, 32, 100];
   @Output() page: number;
 
-  constructor(private quizService: QuizService, public dialog: MdDialog) {
+  constructor(private quizService: QuizService) {
     this.getQuizzes(this.pageIndex, this.pageSize);
   }
 
@@ -33,31 +32,5 @@ export class QuizzesPageComponent {
 
   getByPage(event) {
     this.getQuizzes(event.pageIndex, event.pageSize);
-  }
-
-  openDialog(event) {
-    debugger
-    this.id = event;
-    console.log(this.id);
-    this.dialog.open(DialogOverviewExampleDialog);
-
-  }
-}
-
-@Component({
-  selector: 'modal_quizzes_dialog.page',
-  templateUrl: "./modal_quizzes_dialog.page.html"
-})
-export class DialogOverviewExampleDialog {
-  quizzes: any;
-
-  @Input() pageIndex: number = 1;
-  @Input() pageSize = 10;
-
-
-  constructor(private quizService: QuizService) {
-    this.quizzes = quizService.getQuizzes(this.pageIndex, this.pageSize).subscribe(result => {
-      this.quizzes = result;
-    })
   }
 }

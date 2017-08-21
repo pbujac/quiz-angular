@@ -1,28 +1,12 @@
 <section>
-
     <h1 class="title">Quizzes </h1>
     <div class="line"></div>
-
-    <div *ngFor="let quiz of quizzes ">
-        <md-card class="card" >
-          
-             <div class="row">
-                <div class="column" class="card1">
-                   <div class=subtitle > <div>Category: {{quiz.category.title}}</div>
-                    <div>Author: {{quiz.author.username}}</div>
-                    <div>Create date: {{quiz.created_at* 1000 | date}}</div>                 
-                </div></div>
-                <div class="column" class="card2">
-                    <h1> {{quiz.title}} </h1>
-                    <div class="content">{{quiz.description}}</div><br>
-                    <div class="actions"><button md-button class="button"><md-icon class="icon">arrow_forward</md-icon> Resolve</button></div>
-                    <button md-button (click)="openDialog($event) " >Open dialog</button>
-
-                </div>
-            </div>
-        </md-card>
+    <div class="row">
+        <div class="large-3 columns" *ngFor="let quiz of quizzes ">
+            <quiz [quiz]="quiz"></quiz>
+        </div>
     </div>
-
-    <md-paginator class="card-paginator" [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [pageIndex]="pageIndex" (page)="getByPage($event)">
+    <md-paginator class="card-paginator" [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [pageIndex]="pageIndex"
+        (page)="getByPage($event)">
     </md-paginator>
 </section>
