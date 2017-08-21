@@ -7,6 +7,7 @@ import {Question} from "./model/question.model";
 import {Result} from "app/modules/quiz/model/result.model";
 import {ResultAnswer} from "./model/result-answer.model";
 
+
 @Injectable()
 export class QuizService {
 
@@ -134,7 +135,7 @@ export class QuizService {
    *
    * @returns {number}
    */
-  private incrementPage(page: number) {
+  public incrementPage(page: number) {
     return ++page;
   }
 }

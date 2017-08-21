@@ -1,44 +1,20 @@
 @import "src/assets/sass/utils/utils";
 
 section{
+  .card{
     padding: em(20) em(40) 0;
     text-align: center;
-    
+  }
+    div h1{
+        color: $red;
+    }
+
     .line{
         border-top: em(5) solid $yellow;
         width: 10%;
         margin: 0 auto em(10);
     }
-
-    .card{
-        background-color: $bubbles;
-        margin: 15px 20px;
-        border-style: outset;
-        border-width: 1px 1px 3px 1px;
-
-        .header{
-            .title{
-                font-size: 18px;
-                color: $richBlack;
-            }
-        }
-
-        .description{
-            padding: em(0) em(20);
-            color: $richBlack;
-            font-style: italic;
-            text-align: left;
-        }
-
-        .footer{
-            color: $sacramentoStateGreen;
-            text-align: left;
-            padding-left: em(30);
-        }
-
-        img{
-            width: 100%;
-            height: 100%;
-        }
-    }
+  md-paginator{
+    background-color: $natural-white;
+  }
 }

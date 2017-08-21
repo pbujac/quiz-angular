@@ -7,7 +7,7 @@ import {Router} from "@angular/router";
   templateUrl: './result.component.html',
   styleUrls: ['./result.scss']
 })
-export class ResultComponent {
+export class FinalResultComponent {
 
   @Input() result: Result;
   protected maxScore: number;
