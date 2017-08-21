@@ -28,10 +28,12 @@ body {
 .centered {
   margin: 0 auto;
 }
-.left{
+
+.left {
   text-align: left;
 }
-.right{
+
+.right {
   text-align: right;
 }
 
@@ -45,11 +47,8 @@ section {
     margin: 0 auto em(10);
   }
 
-  .card{
+  .card {
     margin: em(10);
     background: $white;
   }
 }
-
-
-
