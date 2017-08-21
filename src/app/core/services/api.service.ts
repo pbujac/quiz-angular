@@ -132,7 +132,12 @@ export class ApiService {
       return res;
     }
 
-    return res.status === 201 ? {} : res.json() || {};
+    try {
+      return res.json()
+    }
+    catch (e) {
+      return {};
+    }
   }
 
   /**
