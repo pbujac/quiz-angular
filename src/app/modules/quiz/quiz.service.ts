@@ -24,19 +24,10 @@ export class QuizService {
       public getQuizzes(page: number, count:number): Observable<any>  {
 
         return Observable.create(observer => {
-            this.api.get('quizzes?page='+page+'&count='+count).subscribe(result => {
-                observer.next(result._embedded.quizzes);
+            this.api.get('quizzes?page='+ this.incrementPage(page) +'&count='+count).subscribe(result => {
+                observer.next(result);
             }, err => observer.error(err));
         });
     }
-
-     public getTotal(page:number): Observable<any>  {
-
-        return Observable.create(observer => {
-            this.api.get('quizzes?page='+page).subscribe(result => {
-                 observer.next(result.total);
-            }, err => observer.error(err));         
-        });
-    }
-
+    
 }

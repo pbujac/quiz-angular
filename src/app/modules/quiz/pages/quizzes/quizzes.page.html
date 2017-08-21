@@ -3,8 +3,9 @@
     <h1 class="title">Quizzes </h1>
     <div class="line"></div>
 
-    <div *ngFor="let quiz of quizzes | async">
-        <md-card class="card">
+    <div *ngFor="let quiz of quizzes ">
+        <md-card class="card" >
+          
              <div class="row">
                 <div class="column" class="card1">
                    <div class=subtitle > <div>Category: {{quiz.category.title}}</div>
@@ -15,6 +16,8 @@
                     <h1> {{quiz.title}} </h1>
                     <div class="content">{{quiz.description}}</div><br>
                     <div class="actions"><button md-button class="button"><md-icon class="icon">arrow_forward</md-icon> Resolve</button></div>
+                    <button md-button (click)="openDialog($event) " >Open dialog</button>
+
                 </div>
             </div>
         </md-card>
