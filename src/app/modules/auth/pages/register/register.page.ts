@@ -47,7 +47,7 @@ export class RegisterPageComponent implements OnInit {
 
     this.authService.register(user).subscribe(res => {
 
-        this.router.navigate(['home']);
+        this.router.navigate(['login']);
       }, err => {
         this.error = err.error;
       }
