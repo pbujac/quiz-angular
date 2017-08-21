@@ -1,6 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
 import { MdDialog } from '@angular/material';
-import { DialogComponent } from '../../../modals/modal-result/modal-result.component';
+import { ResultModal } from '../../../modals/modal-result/modal-result.component';
 
 @Component({
     selector: 'result',
@@ -15,7 +15,7 @@ export class ResultComponent {
     }
 
     openDialog() {
-        let dialogRef = this.dialog.open(DialogComponent, {
+        let dialogRef = this.dialog.open(ResultModal, {
             data: this.result
         });
     }

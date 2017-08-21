@@ -1,7 +1,7 @@
 import { Component, Input, Output } from '@angular/core';
 import { QuizService } from 'app/modules/quiz/quiz.service';
 import { MdDialog } from '@angular/material';
-import { DialogComponent } from '../../modals/modal-result/modal-result.component';
+import { ResultModal } from '../../modals/modal-result/modal-result.component';
 
 @Component({
     templateUrl: '/user-results.page.html',
