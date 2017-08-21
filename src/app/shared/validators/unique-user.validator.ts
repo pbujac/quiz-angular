@@ -18,29 +18,4 @@ export class UniqueUserValidation {
     }
   }
 
-  // static userNameValidator( authService: AuthService) {
-  //   return (control: FormControl): Promise<any> => {
-  //     return new Promise<any>((resolve, reject) => {
-  //
-  //         authService.getUserByUsername(control.value).subscribe(
-  //           (res) => {
-  //             if (res) {
-  //
-  //               resolve({'userTaken': true});
-  //             } else {
-  //               console.log("NOT existing");
-  //               resolve(null);
-  //             }
-  //           },
-  //           (error) => {
-  //             console.log(error);
-  //           }
-  //         );
-  //
-  //         resolve(null);
-  //
-  //     })
-  //   }
-  // }
-
 }

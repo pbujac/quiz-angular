@@ -8,6 +8,7 @@ import {AbstractControl} from '@angular/forms';
 export function ValidCheckBoxValidation(control: AbstractControl) {
 
   if (control.value == false) {
+
     return {'checked': true};
   }
 

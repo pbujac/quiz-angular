@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 import {AuthService} from "app/modules/auth/auth.service";
 import {FormGroup, FormControl, Validators} from "@angular/forms";
 import {User} from "../../model/user.model";
-import {Router} from "@angular/router";
 
 
 @Component({
@@ -39,6 +39,8 @@ export class LoginPageComponent implements OnInit {
       null
     );
     this.authService.login(user).subscribe(res => {
+
+        this.router.navigate(['home']);
       }, err => {
         this.error = err.error;
       }
