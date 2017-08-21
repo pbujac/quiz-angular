@@ -10,7 +10,6 @@ export class AuthService {
 
   /**
    * @param {ApiService} api
-   * @param {AuthenticatedGuard} auth
    * @param {Router} router
    */
   constructor(private api: ApiService, private router: Router) {
