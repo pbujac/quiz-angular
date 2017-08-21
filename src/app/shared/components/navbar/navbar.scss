@@ -7,29 +7,24 @@
   color: $white;
   padding: em(15) em(25);
 
-  .align-center, h1 {
+  .align-right, h1 {
     display: inline;
   }
 
-  .align-center, .align-left, .align-right {
+  .align-right, .align-left {
     font-size: em(10);
     font-family: $second-font-family;
   }
   h1 {
     margin-right: em(15);
   }
-  .align-center {
-    float: center;
+  .align-right {
+    float: right;
     margin-top: em(8);
   }
 
   .align-left {
     margin: 0 em(8);
-  }
-
-  .align-right {
-    margin: 0 em(8);
-   display: inline;
   }
 
   a {
