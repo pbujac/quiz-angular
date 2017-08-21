@@ -16,7 +16,7 @@ import {routing} from "app/modules/quiz/quiz.routes";
 import {FormsModule} from '@angular/forms';
 import {MdDialogModule} from '@angular/material';
 import {QuizzesComponent} from "./components/quizzes/quizzes.component";
-import {QuizzesPageComponent} from "./pages/quizzes/quizzes.page";
+import {QuizzesPageComponent} from "./pages/quiz-list/all-quizzes/quizzes.page";
 import {QuizDialogComponent} from "./modals/modal-quizzes/modal-quizzes.component";
 
 @NgModule({
