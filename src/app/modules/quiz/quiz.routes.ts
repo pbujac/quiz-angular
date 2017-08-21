@@ -2,7 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthenticatedGuard } from "app/shared/guards/authenticated.guard";
 import { QuizCategoriesPageComponent } from "app/modules/quiz/pages/quiz-categories/quiz-categories.page";
-import { QuizListByCategoriesPageComponent } from "app/modules/quiz/pages/quiz-list/category/quiz-list-by-categories.page";
+import { QuizListByCategoriesPageComponent } from "app/modules/quiz/pages/quiz-list/by-category/quiz-list-by-categories.page";
 import { UserResultsPageComponent } from './pages/user-results/user-results.page'
 
 const routes: Routes = [

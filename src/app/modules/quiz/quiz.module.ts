@@ -1,6 +1,6 @@
 import { QuizCategoryComponent } from "app/modules/quiz/components/quiz-category/quiz-category.component";
 import { QuizCategoriesPageComponent } from "app/modules/quiz/pages/quiz-categories/quiz-categories.page";
-import { QuizListByCategoriesPageComponent } from "app/modules/quiz/pages/quiz-list/category/quiz-list-by-categories.page";
+import { QuizListByCategoriesPageComponent } from "app/modules/quiz/pages/quiz-list/by-category/quiz-list-by-categories.page";
 import { QuizComponent } from "app/modules/quiz/components/quiz/quiz.component";
 import { QuizCategorySelectorComponent } from "app/modules/quiz/components/category-selector/quiz-category-selector";
 import { QuizModal } from 'app/modules/quiz/components/quiz/modal/modal-quiz.component';
