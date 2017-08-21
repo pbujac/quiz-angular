@@ -47,8 +47,12 @@ section {
     margin: 0 auto em(10);
   }
 
-  .card {
+  md-card, .card {
     margin: em(10);
     background: $white;
+    padding: em(10);
+    button{
+      padding: 0 em(10);
+    }
   }
 }

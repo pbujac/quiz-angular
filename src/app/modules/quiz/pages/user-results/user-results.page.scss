@@ -1,11 +1,6 @@
 @import "src/assets/sass/utils/utils";
 
 section {
-  .card {
-
-    padding: em(20) em(40) 0;
-    text-align: center;
-  }
 
   div h1 {
     color: $red;
@@ -16,9 +11,11 @@ section {
     width: 10%;
     margin: 0 auto em(10);
   }
-  md-paginator{
+
+  md-paginator {
     background-color: $natural-white;
   }
+
 }
 
 
