@@ -4,7 +4,8 @@ import { QuizService } from '../../../../quiz.service';
 
 @Component({
   selector: 'quiz-category-selector',
-  templateUrl: 'quiz-category-selector.html'
+  templateUrl: 'quiz-category-selector.html',
+  styleUrls: ['quiz-category-selector.scss']
 })
 export class QuizCategorySelectorComponent implements OnInit{
   ngOnInit(): void {

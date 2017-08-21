@@ -11,7 +11,7 @@
     display: inline;
   }
 
-  .align-center, .align-left {
+  .align-center, .align-left, .align-right {
     font-size: em(10);
     font-family: $second-font-family;
   }
@@ -24,6 +24,10 @@
   }
 
   .align-left {
+    margin: 0 em(8);
+  }
+
+  .align-right {
     margin: 0 em(8);
   }
 
