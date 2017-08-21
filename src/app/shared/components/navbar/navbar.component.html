@@ -2,23 +2,33 @@
 
   <h1>Brand</h1>
 
-  <a class="align-left">
+<div class="row">
+   <div class="small-6 medium-2 large-1 columns">
+     <a class="align-center" [routerLink]="['/']">
     <i class="material-icons">home</i>
     Home
   </a>
-
-  <a class="align-left">
+   </div>
+   <div class="small-6 medium-2 large-1 columns">
+     <a class="align-center" [routerLink]="['/quiz-list-by-categories/all']">
     <i class="material-icons">list</i>
     Quizzes
   </a>
-  <a class="align-left">
+   </div>
+   <div class="small-6 medium-2 large-2 columns">
+     <a class="align-center" [routerLink]="['/categories']">
     <i class="material-icons">lightbulb_outline</i>
     Categories
   </a>
-
-  <a class="align-right">
+   </div>
+<div class="small-0 medium-4 large-7 columns"> <br>
+   </div>
+   <div class="small-6 medium-2 large-1 columns">
+     <a class="align-center">
     <i class="material-icons">perm_identity</i>
     Logout
   </a>
+   </div>
+</div>
 
 </nav>

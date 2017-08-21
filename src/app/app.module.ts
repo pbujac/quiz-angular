@@ -4,8 +4,9 @@ import {AppComponent} from './app.component';
 import {CoreModule} from './core/core.module';
 import {SharedModule} from './shared/shared.module';
 import {routes} from './app.routes';
-import {HomeModule} from './modules/home/home.module';
-import {QuizModule} from './modules/quiz/quiz.module';
+import {HomeModule} from "./modules/home/home.module";
+import {QuizModule} from "./modules/quiz/quiz.module";
+import {QuizService} from './modules/quiz/quiz.service';
 
 @NgModule({
   declarations: [
