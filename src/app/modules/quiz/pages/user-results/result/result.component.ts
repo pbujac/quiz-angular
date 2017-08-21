@@ -1,6 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
 import { MdDialog } from '@angular/material';
-import { DialogComponent } from '../modal-result/modal-result.component';
+import { DialogComponent } from '../../../modals/modal-result/modal-result.component';
 
 @Component({
     selector: 'result',

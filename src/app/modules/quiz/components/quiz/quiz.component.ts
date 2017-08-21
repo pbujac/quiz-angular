@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {MdDialog, MD_DIALOG_DATA} from '@angular/material';
 
-import { QuizModal } from './modal/modal-quiz.component';
+import { QuizModal } from '../../modals/modal-quiz/modal-quiz.component';
 
 @Component({
     selector: 'quiz',

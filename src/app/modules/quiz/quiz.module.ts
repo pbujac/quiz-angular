@@ -3,8 +3,8 @@ import { QuizCategoriesPageComponent } from "app/modules/quiz/pages/quiz-categor
 import { QuizListByCategoriesPageComponent } from "app/modules/quiz/pages/quiz-list/by-category/quiz-list-by-categories.page";
 import { QuizComponent } from "app/modules/quiz/components/quiz/quiz.component";
 import { QuizCategorySelectorComponent } from "app/modules/quiz/components/category-selector/quiz-category-selector";
-import { QuizModal } from 'app/modules/quiz/components/quiz/modal/modal-quiz.component';
-import { DialogComponent } from './pages/user-results/modal-result/modal-result.component';
+import { QuizModal } from 'app/modules/quiz/modals/modal-quiz/modal-quiz.component';
+import { DialogComponent } from 'app/modules/quiz/modals/modal-result/modal-result.component';
 import { ResultComponent } from './pages/user-results/result/result.component';
 import { UserResultsPageComponent } from './pages/user-results/user-results.page';
 
