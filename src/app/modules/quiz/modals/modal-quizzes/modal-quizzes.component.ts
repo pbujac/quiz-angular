@@ -4,8 +4,8 @@ import { MD_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'modal-quiz',
-  templateUrl: '/modal-quiz.component.html',
-  styleUrls: ['modal-quiz.component.scss']
+  templateUrl: '/modal-quizzes.component.html',
+  styleUrls: ['modal-quizzes.component.scss']
 
 })
 export class QuizDialogComponent {
