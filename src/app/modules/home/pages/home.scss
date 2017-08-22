@@ -5,6 +5,9 @@ section {
   .card {
     padding: em(25) em(20) em(45);
 
+    h2{
+      font-size: em(18);
+    }
     img {
       max-height: em(150);
       max-width: 100%;
@@ -12,16 +15,16 @@ section {
       margin: em(10) auto;
     }
     p {
-      font-size: em(10);
+      font-size: em(13);
       margin: em(10) em(10) em(20);
     }
     a {
       color: $grey-black;
       background-color: $white;
       border: em(3) solid $yellow;
-      padding: em(10) em(35);
+      padding: em(12) em(40);
       border-radius: 3%;
-      font-size: em(11);
+      font-size: em(12);
     }
 
   }

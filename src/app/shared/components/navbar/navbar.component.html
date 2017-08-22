@@ -2,36 +2,47 @@
 
   <h1>Brand</h1>
 
-  <a [routerLink]="['/home']"[routerLinkActive]="['active']" class="align-left">
+  <a [routerLink]="['/home']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']" class="align-left">
     <i class="material-icons">home</i>
     Home
   </a>
 
-  <a [routerLink]="['/quizzes']"[routerLinkActive]="['active']"
+  <a [routerLink]="['/quizzes']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']"
      class="align-left">
     <i class="material-icons">list</i>
     Quizzes
   </a>
 
-  <a [routerLink]="['/quiz-list-by-categories/all']"[routerLinkActive]="['active']"
+  <a [routerLink]="['/quiz-list-by-categories/all']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']"
      class="align-left">
     <i class="material-icons">list</i>
     Quizzes Category
   </a>
 
-  <a [routerLink]="['/categories']"  [routerLinkActive]="['active']" class="align-left">
+  <a [routerLink]="['/categories']"  *ngIf="isAuthenticated()"   [routerLinkActive]="['active']" class="align-left">
     <i class="material-icons">lightbulb_outline</i>
     Categories
   </a>
 
-  <a [routerLink]="['/user-results']"  [routerLinkActive]="['active']" class="align-left">
+  <a [routerLink]="['/user-results']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']" class="align-left">
     <i class="material-icons">playlist_add_check</i>
     Results
   </a>
 
-  <a [routerLink]="['/register']"  [routerLinkActive]="['active']" class="align-right">
+  <a [routerLink]="['/login']" *ngIf="!isAuthenticated()" [routerLinkActive]="['active']" class="align-right">
+    <i class="material-icons">perm_identity</i>
+    Login
+  </a>
+
+
+  <a [routerLink]="['/register']" *ngIf="!isAuthenticated()" [routerLinkActive]="['active']" class="align-right">
     <i class="material-icons">person_add</i>
     Register
+  </a>
+
+  <a *ngIf="isAuthenticated()" (click)="onLogout()" [routerLinkActive]="['active']" class="align-right">
+    <i class="material-icons">perm_identity</i>
+    Logout
   </a>
 
 </nav>
