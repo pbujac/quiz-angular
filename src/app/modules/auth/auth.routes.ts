@@ -5,6 +5,11 @@ import {LoginPageComponent} from "./pages/login/login.page";
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
     path: 'register',
     component: RegisterPageComponent
   },

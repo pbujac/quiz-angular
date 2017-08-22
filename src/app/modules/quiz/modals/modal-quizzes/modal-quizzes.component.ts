@@ -1,6 +1,5 @@
-import { Component, Input, Inject } from '@angular/core';
-import { MdDialog } from '@angular/material';
-import { MD_DIALOG_DATA } from '@angular/material';
+import {Component, Input, Inject} from '@angular/core';
+import {MD_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'modal-quiz',
@@ -10,6 +9,10 @@ import { MD_DIALOG_DATA } from '@angular/material';
 })
 export class QuizDialogComponent {
 
-  constructor( @Inject(MD_DIALOG_DATA) public quiz: any) {
+  /**
+   * @param quiz
+   */
+  constructor(@Inject(MD_DIALOG_DATA) public quiz: any) {
   }
+
 }

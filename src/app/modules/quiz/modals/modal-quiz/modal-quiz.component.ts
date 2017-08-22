@@ -1,4 +1,4 @@
-import {Component , Inject} from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import {MD_DIALOG_DATA} from '@angular/material';
 
 @Component({
@@ -8,8 +8,11 @@ import {MD_DIALOG_DATA} from '@angular/material';
 })
 export class QuizModal {
 
+  /**
+   * @param quiz
+   */
   constructor(@Inject(MD_DIALOG_DATA) public quiz: any) {
-    }
+  }
 
 }
 

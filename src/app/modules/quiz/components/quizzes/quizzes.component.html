@@ -7,6 +7,6 @@
     </div>
 
     <div class="actions"><button md-button class="button_view" (click)="openDialog($event) ">View details</button>
-                         <button md-button class="button_resolve"> Resolve</button>        
+                         <button md-button routerLink="/quiz-solve/{{quiz.id}}" class="button_resolve"> Resolve</button>
     </div>
 </md-card>
