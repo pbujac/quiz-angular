@@ -7,6 +7,11 @@
     Home
   </a>
 
+  <a [routerLink]="['/categories']"  *ngIf="isAuthenticated()"   [routerLinkActive]="['active']" class="align-left">
+    <i class="material-icons">lightbulb_outline</i>
+    Categories
+  </a>
+
   <a [routerLink]="['/quizzes']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']"
      class="align-left">
     <i class="material-icons">list</i>
@@ -17,11 +22,6 @@
      class="align-left">
     <i class="material-icons">list</i>
     Quizzes Category
-  </a>
-
-  <a [routerLink]="['/categories']"  *ngIf="isAuthenticated()"   [routerLinkActive]="['active']" class="align-left">
-    <i class="material-icons">lightbulb_outline</i>
-    Categories
   </a>
 
   <a [routerLink]="['/user-results']"  *ngIf="isAuthenticated()"  [routerLinkActive]="['active']" class="align-left">

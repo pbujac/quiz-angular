@@ -25,11 +25,11 @@ export class RegisterPageComponent implements OnInit {
 
   ngOnInit() {
     this.registerForm = new FormGroup({
-        username: new FormControl('', [Validators.required]),
-        password: new FormControl('', [Validators.required, Validators.minLength(5)]),
-        confirmPassword: new FormControl('', [Validators.required, Validators.minLength(5)]),
-        firstName: new FormControl('', [Validators.required, Validators.minLength(5)]),
-        lastName: new FormControl('', [Validators.required, Validators.minLength(5)]),
+        username: new FormControl('', [Validators.required,Validators.minLength(5)]),
+        password: new FormControl('', [Validators.required, Validators.minLength(2)]),
+        confirmPassword: new FormControl('', [Validators.required, Validators.minLength(2)]),
+        firstName: new FormControl('', [Validators.required, Validators.minLength(2)]),
+        lastName: new FormControl('', [Validators.required, Validators.minLength(2)]),
         checkControl: new FormControl(false, [Validators.required, ValidCheckBoxValidation])
       },
       MatchPasswordValidation

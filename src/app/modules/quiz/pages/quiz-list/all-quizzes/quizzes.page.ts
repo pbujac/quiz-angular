@@ -12,9 +12,9 @@ export class QuizzesPageComponent {
   @Input() id: number;
   quizzes: any;
   length: any;
-  @Input() pageIndex: number = 1;
+  @Input() pageIndex: number = 0;
   @Input() pageSize = 8;
-  @Input() pageSizeOptions = [8, 16, 32, 100];
+  @Input() pageSizeOptions = [1, 4, 8, 16, 32, 100];
   @Output() page: number;
 
   /**
